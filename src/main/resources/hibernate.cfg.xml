@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.show_sql">false</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.provider_class">com.yidumen.web.framework.ACEConnectionProvider</property>
+    <mapping class="com.yidumen.dao.entity.Video"/>
+    <mapping class="com.yidumen.dao.entity.VideoInfo"/>
+    <mapping class="com.yidumen.dao.entity.AccessInfo"/>
+    <mapping class="com.yidumen.dao.entity.Account"/>
+    <mapping class="com.yidumen.dao.entity.CmsUser"/>
+    <mapping class="com.yidumen.dao.entity.Comment"/>
+    <mapping class="com.yidumen.dao.entity.Sutra"/>
+    <mapping class="com.yidumen.dao.entity.SutraMark"/>
+    <mapping class="com.yidumen.dao.entity.Tag"/>
+    <mapping class="com.yidumen.dao.entity.UserMessage"/>
+    <mapping class="com.yidumen.dao.entity.VerifyInfo"/>
+    <mapping class="com.yidumen.dao.entity.Goods"/>
+  </session-factory>
+</hibernate-configuration>
