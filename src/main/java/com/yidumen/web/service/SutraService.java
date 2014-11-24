@@ -1,9 +1,8 @@
 package com.yidumen.web.service;
 
-import com.yidumen.dao.entity.Goods;
 import com.yidumen.dao.entity.Sutra;
 import com.yidumen.dao.entity.Video;
-import com.yidumen.web.view.model.LotusModel;
+import com.yidumen.web.view.model.SutraModel;
 import java.util.List;
 
 /**
@@ -22,7 +21,9 @@ public interface SutraService {
 
     List<Sutra> findSutras();
 
-    List<LotusModel> getLotusSutras();
+    List<SutraModel> getLotusSutras();
+
+    List<SutraModel> getDiamonds();
 
     List<Sutra> getLotusSutrasOriginal();
 

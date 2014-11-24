@@ -5,15 +5,19 @@ import com.yidumen.dao.constant.GoodsStatus;
 import com.yidumen.dao.entity.Goods;
 import com.yidumen.web.service.GoodsService;
 import java.util.Date;
-import javax.inject.Inject;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author 蔡迪旻
  */
+@Service
+@Transactional
 public class GoodsServiceImpl implements GoodsService {
 
-    @Inject
+    @Autowired
     private GoodsDAO goodsDAO;
 
     @Override

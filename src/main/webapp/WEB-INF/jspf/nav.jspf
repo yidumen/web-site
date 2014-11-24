@@ -1,0 +1,12 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<div id="header">
+    <a href="/"><img src="http://yimg.yidumen.com/yidumen/web/images/logo.png" alt="logo" id="logo"/></a>
+    <ul id="navigator">
+        <li>${nav == 1 ? "<a class='current_nav' href='/lotus/list'>妙法莲华</a>" : "<a href='/lotus/list'>妙法莲华</a>"}</li>
+        <li>${nav == 2 ? "<a class='current_nav' href='/diamond/list'>金刚经</a>" : "<a href='/diamond/list'>金刚经</a>"}</li>
+        <li>${nav == 3 ? "<a class='current_nav' href='/buddhism/list'>佛法</a>" : "<a href='/buddhism/list'>佛法</a>"}</li>
+        <li>${nav == 4 ? "<a class='current_nav' href='/video/list'>聊天室</a>" : "<a href='/video/list'>聊天室</a>"}</li>
+        <li>${nav == 5 ? "<a class='current_nav' href='/goods'>结缘</a>" : "<a href='/goods/'>结缘</a>"}</li>
+    </ul>
+    <a href="/yangning.jsp" class="nav_yangning"></a>
+</div>

@@ -1,125 +1,105 @@
 package com.yidumen.web.view.controller;
 
 import com.yidumen.dao.entity.Sutra;
-import com.yidumen.dao.framework.HibernateUtil;
 import com.yidumen.web.service.SutraService;
-import java.util.List;
-import javax.annotation.PostConstruct;
-import javax.annotation.PreDestroy;
-import javax.enterprise.context.RequestScoped;
-import javax.inject.Inject;
-import javax.inject.Named;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mobile.device.Device;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
- * @author 蔡迪旻 <yidumen.com>
+ * @author 蔡迪旻
  */
-@Named("buddhist")
-@RequestScoped
+@Controller
+@RequestMapping("buddhism")
 public class BuddhismController {
 
-    private final static Logger log = LoggerFactory.getLogger(BuddhismController.class);
+    private final Logger log = LoggerFactory.getLogger(BuddhismController.class);
+    @Autowired
+    private SutraService sutraService;
 
-    @Inject
-    private SutraService service;
-
-    /**
-     * 存储页面传递的buddhism id参数，此参数用于向后台查询相应的佛经对象
-     */
-    private String id;
-
-    private Sutra buddhism;
-    private List<Sutra> buddhisms;
-
-    @PostConstruct
-    public void init() {
-        HibernateUtil.getSessionFactory().getCurrentSession().beginTransaction();
+    @RequestMapping("list")
+    public String list(Model model, Device device) {
+        model.addAttribute("practice", sutraService.findPracticeBuddhims());
+        model.addAttribute("study", sutraService.findStudyBuddhims());
+        model.addAttribute("known", sutraService.findKnownBuddhism());
+        model.addAttribute("nav", 3);
+        return "buddhism/list";
     }
 
-    @PreDestroy
-    public void destroy() {
-        HibernateUtil.getSessionFactory().getCurrentSession().getTransaction().commit();
+    @RequestMapping("known")
+    public String knownDirectory(Model model, Device device) {
+        model.addAttribute("buddhisms", sutraService.findKnownBuddhism());
+        model.addAttribute("title", "了解佛教");
+        model.addAttribute("path", "known");
+        model.addAttribute("nav", 3);
+        return "buddhism/directory";
     }
 
-    /**
-     * 了解佛教页面初始化
-     *
-     * @return
-     */
-    public String initKnown() {
-        log.debug("buddhism's id is {}", id);
-
-        if (id == null) {
-            return "pretty:error";
-        }
-        long sid = Long.parseLong(id);
-
-        buddhism = service.findSutra(sid);
-
-        if (buddhism == null) {
-            log.debug("no buddhsim that id is {} found.", id);
-            return "pretty:error";
-        }
-
-        return null;
+    @RequestMapping("study")
+    public String studyDirectory(Model model, Device device) {
+        model.addAttribute("buddhisms", sutraService.findStudyBuddhims());
+        model.addAttribute("title", "学习佛法");
+        model.addAttribute("path", "study");
+        model.addAttribute("nav", 3);
+        return "buddhism/directory";
     }
 
-    /**
-     * 了解佛教目录页面初始化
-     */
-    public void initKnownDir() {
-        this.buddhisms = this.service.findKnownBuddhism();
+    @RequestMapping("practice")
+    public String practiceDirectory(Model model, Device device) {
+        model.addAttribute("buddhisms", sutraService.findPracticeBuddhims());
+        model.addAttribute("title", "修证佛法");
+        model.addAttribute("path", "practice");
+        model.addAttribute("nav", 3);
+        return "buddhism/directory";
     }
 
-    /**
-     * 学习佛法、修证佛法页面初始化
-     *
-     * @return
-     */
-    public String initStudy() {
-        if (id == null) {
-            return "pretty:error";
-        }
-
-        buddhism = service.findSutra(Long.parseLong(id));
-
-        if (buddhism == null) {
-            log.debug("no buddhsim that id is {} found.", id);
-            return "pretty:error";
-        }
-        return null;
+    @RequestMapping("known/{id}")
+    public String viewKnown(Model model, Device device, @PathVariable("id") Long id) {
+        initViewModel(id, model);
+        model.addAttribute("path", "known");
+        model.addAttribute("title", "了解佛教");
+        return "buddhism/view";
     }
 
-    /**
-     * 学习佛法目录页面初始化
-     */
-    public void initStudyDir() {
-        buddhisms = service.findStudyBuddhims();
+    @RequestMapping("study/{id}")
+    public String viewStudy(Model model, Device device, @PathVariable("id") Long id) {
+        initViewModel(id, model);
+        model.addAttribute("path", "study");
+        model.addAttribute("title", "学习佛法");
+        return "buddhism/view";
     }
 
-    /**
-     * 修证佛法目录页面初始化
-     */
-    public void initPracticeDir() {
-        buddhisms = service.findPracticeBuddhims();
+    @RequestMapping("practice/{id}")
+    public String viewPractice(Model model, Device device, @PathVariable("id") Long id) {
+        initViewModel(id, model);
+        model.addAttribute("path", "practice");
+        model.addAttribute("title", "修证佛法");
+        return "buddhism/view";
     }
 
-    public String getId() {
-        return id;
+    @RequestMapping(value = "loadmore/{id}", method = RequestMethod.GET, produces = {"text/html;charset=utf-8"})
+    @ResponseBody
+    public String loadmore(@PathVariable("id") Long id) {
+        final String content = sutraService.findSutra(id).getContent();
+        log.debug(content);
+        return content;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Sutra getBuddhism() {
-        return buddhism;
-    }
-
-    public List<Sutra> getBuddhisms() {
-        return buddhisms;
+    private void initViewModel(Long id, Model model) {
+        final Sutra sutra = sutraService.findSutra(id);
+        model.addAttribute("buddhism", sutra);
+        model.addAttribute("prev", sutraService.findPreSutra(sutra));
+        model.addAttribute("next", sutraService.findNextSutra(sutra));
+        model.addAttribute("pageCount", sutraService.getPageCount(sutra));
+        model.addAttribute("nav", 3);
     }
 
 }

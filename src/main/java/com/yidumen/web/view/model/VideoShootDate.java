@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author 蔡迪旻 <yidumen.com>
  */
-public class VideoShootDate implements Comparable<VideoShootDate> {
+public final class VideoShootDate implements Comparable<VideoShootDate> {
 
     private int year;
     private final List<String> month;

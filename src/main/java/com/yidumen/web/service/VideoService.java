@@ -42,5 +42,7 @@ public interface VideoService {
     Tag findTags(String tagname);
 
     List<Tag> findTags(TagType type);
+
+    List<Video> findDiamond();
     
 }

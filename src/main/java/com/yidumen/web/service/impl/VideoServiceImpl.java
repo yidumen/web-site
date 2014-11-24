@@ -17,20 +17,24 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import javax.inject.Inject;
+import javax.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author 刘超 蔡迪旻 <yidumen.com>
  */
+@Service
+@Transactional
 public class VideoServiceImpl implements VideoService {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
-    @Inject
+    @Autowired
     private VideoDAO videoDao;
-    @Inject
+    @Autowired
     private TagDAO tagDao;
 
     private final String[] month_cn;
@@ -46,7 +50,10 @@ public class VideoServiceImpl implements VideoService {
         final List<VideoStatus> status = new ArrayList<>();
         status.add(VideoStatus.PUBLISH);
         model.setStatus2(status);
-
+        final List<Tag> tags = new ArrayList<>();
+        Tag tag = tagDao.find("聊天室");
+        tags.add(tag);
+        model.setTags(tags);
         model.setOrderProperty("pubDate");
         model.setDesc(true);
         model.setLimit(limit);
@@ -106,7 +113,7 @@ public class VideoServiceImpl implements VideoService {
     public List<Tag> findTags(int limit) {
         return tagDao.findVideoTags(limit);
     }
-    
+
     @Override
     public List<Tag> findTags(TagType type) {
         Tag tag = new Tag();
@@ -216,5 +223,14 @@ public class VideoServiceImpl implements VideoService {
     @Override
     public Tag findTags(String tagname) {
         return tagDao.find(tagname);
+    }
+
+    @Override
+    public List<Video> findDiamond() {
+        Tag tag = new Tag();
+        tag.setTagname("金刚经");
+        tag.setType(TagType.COLUMN);
+        List<Tag> tags = tagDao.find(tag);
+        return tags.get(0).getVideos();
     }
 }

@@ -1,0 +1,37 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<div id="footer">
+    <ul>
+        <li><a href="http://m.yidumen.com">易度门手机版</a></li>
+        <li><a href="http://m.yidumen.com/">返回首页</a></li>
+        <li><a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=3bG0vLOltJ2ktLmosLiz876ysA">联系我们</a></li>
+    </ul>
+</div>
+<script>
+    $(document).ready(
+            function ()
+            {
+
+                var windowheight = $(window).height();
+                var bodyheight = $(document.body).outerHeight(true);
+                var footerheight = $("#footer").height();
+                var imgheight = $("#bigimg").height();
+                if (bodyheight < windowheight)
+                {
+                    if (imgheight === 0)
+                    {
+                        $("#main_container").height("auto");
+                    }
+                    else {
+                        var abc = windowheight - bodyheight;
+                        var cba = $("#main_container").height();
+                        var ab = abc + cba;
+                        $(document.body).height(windowheight);
+                        $("#main_container").height(ab);
+                        $("#page_area").css({"margin-top": abc, "height": "auto", "overflow": "auto"});
+                    }
+                }
+
+
+            }
+    );
+</script>

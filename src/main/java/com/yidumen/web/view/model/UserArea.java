@@ -4,7 +4,7 @@ package com.yidumen.web.view.model;
  *
  * @author 蔡迪旻 <yidumen.com>
  */
-public class UserArea {
+public final class UserArea {
 
     private String code;
     private Region data;

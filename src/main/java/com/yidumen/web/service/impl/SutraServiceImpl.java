@@ -1,37 +1,35 @@
 package com.yidumen.web.service.impl;
 
-import com.yidumen.dao.GoodsDAO;
 import com.yidumen.web.service.SutraService;
 import com.yidumen.dao.SutraDAO;
 import com.yidumen.dao.SutraMarkDAO;
 import com.yidumen.dao.VideoDAO;
-import com.yidumen.dao.constant.GoodsStatus;
-import com.yidumen.dao.entity.Goods;
 import com.yidumen.dao.entity.Sutra;
 import com.yidumen.dao.entity.Video;
 import com.yidumen.dao.model.VideoQueryModel;
-import com.yidumen.web.view.model.LotusModel;
+import com.yidumen.web.view.model.SutraModel;
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
-import javax.inject.Inject;
+import javax.transaction.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author 刘超 蔡迪旻<yidumen.com>
  */
-public class SutraServiceImpl implements SutraService,Serializable {
+@Service
+@Transactional
+public class SutraServiceImpl implements SutraService, Serializable {
 
-    @Inject
+    @Autowired
     private SutraDAO sutraDao;
-    @Inject
+    @Autowired
     private SutraMarkDAO markDao;
-    @Inject
+    @Autowired
     private VideoDAO videoDAO;
-    @Inject
-    private GoodsDAO goodsDAO;
 
     //暂使用这个属性来计算了解佛教里面相关视频的代码值
     private int c;
@@ -51,8 +49,8 @@ public class SutraServiceImpl implements SutraService,Serializable {
     }
 
     @Override
-    public List<LotusModel> getLotusSutras() {
-        final List<LotusModel> result = new ArrayList<>();
+    public List<SutraModel> getLotusSutras() {
+        final List<SutraModel> result = new ArrayList<>();
 
         final List<Sutra> originals = getLotusSutrasOriginal();
         final List<Sutra> vernaculars = getLotusSutrasVernacular();
@@ -61,7 +59,30 @@ public class SutraServiceImpl implements SutraService,Serializable {
                 if (original.getLeftValue() + 58L != vernacular.getLeftValue()) {
                     continue;
                 }
-                final LotusModel model = new LotusModel();
+                final SutraModel model = new SutraModel();
+                model.setPartIdentifier(original.getPartIdentifier());
+                model.setTitle(original.getTitle());
+                model.setOriginalId(original.getId());
+                model.setVernacularId(vernacular.getId());
+
+                result.add(model);
+            }
+        }
+        return result;
+    }
+
+    @Override
+    public List<SutraModel> getDiamonds() {
+        final List<SutraModel> result = new ArrayList<>();
+
+        final List<Sutra> originals = getDiamondOriginal();
+        final List<Sutra> vernaculars = getDiamondVernacular();
+        for (Sutra vernacular : vernaculars) {
+            for (Sutra original : originals) {
+                if (original.getLeftValue() + 66L != vernacular.getLeftValue()) {
+                    continue;
+                }
+                final SutraModel model = new SutraModel();
                 model.setPartIdentifier(original.getPartIdentifier());
                 model.setTitle(original.getTitle());
                 model.setOriginalId(original.getId());
@@ -126,19 +147,19 @@ public class SutraServiceImpl implements SutraService,Serializable {
 
     @Override
     public List<Sutra> findKnownBuddhism() {
-        return removeSubPage(sutraDao.find(124, 237));
+        return removeSubPage(sutraDao.find(257, 370));
     }
 
     @Override
     public List<Sutra> findStudyBuddhims() {
-        return removeSubPage(sutraDao.find(238, 407));
+        return removeSubPage(sutraDao.find(371, 540));
     }
 
     @Override
     public List<Sutra> findPracticeBuddhims() {
-        return removeSubPage(sutraDao.find(408, 419));
+        return removeSubPage(sutraDao.find(541, 552));
     }
-    
+
     private List<Sutra> removeSubPage(final List<Sutra> sutras) {
         final Pattern pattern = Pattern.compile("第\\d页");
         final List<Sutra> result = new ArrayList<>();
@@ -160,6 +181,14 @@ public class SutraServiceImpl implements SutraService,Serializable {
         model.setOrderProperty("file");
         model.setDesc(false);
         return videoDAO.find(model);
+    }
+
+    private List<Sutra> getDiamondOriginal() {
+        return sutraDao.find(125, 190);
+    }
+
+    private List<Sutra> getDiamondVernacular() {
+        return sutraDao.find(191, 256);
     }
 
 }

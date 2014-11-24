@@ -1,0 +1,27 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<dl class="r_contact">
+    <dt>互动交流</dt>
+    <dd>
+        <form name="frmjiaoliu" id="frmjiaoliu" action="/share/useradd" method="post">
+            <div class="r_textarea_outer">
+                <div class="r_textarea_inside">
+                    <textarea rows="5"  name="title"  id="title" onkeyup="ResizeTextarea();" 
+                              onfocus="if (this.value == '如果您有任何的感受、想法，都欢迎与我们分享。') {
+                                                  this.value = '';
+                                              }
+                                              this.style.color = '#666';
+                                              this.style.fontSize = '12px';
+                                              this.style.lineHeight = '18px'" 
+                              onblur="if (this.value == '') {
+                                                  this.value = '如果您有任何的感受、想法，都欢迎与我们分享。';
+                                                  this.style.color = '#ccc';
+                                                  this.style.fontSize = '12px';
+                                                  this.style.lineHeight = '18px';
+                                              }" >如果您有任何的感受、想法，都欢迎与我们分享。</textarea> 
+                </div>
+            </div>
+            <input type="button" name="shareSubmit" id="shareSubmit" value="提 交" />
+        </form>
+    </dd>
+
+</dl>
