@@ -26,7 +26,7 @@
                         <span id="totalSecond">15</span>秒后将转入结缘页面
                     </div> 
                     <script>var reurl = "/goods/";</script>
-                    <script src="http://yjs.yidumen.com/yidumen/web/js/count.js"></script>
+                    <script src="/resources/web/js/count.js"></script>
                 </div>
             </div>
         </div>

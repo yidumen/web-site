@@ -1,14 +1,11 @@
-﻿<%@page contentType="text/html" pageEncoding="utf-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<%@page contentType="text/html" pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
     <head>
         <title>结缘 修证佛法 - 易度门</title>
-        <meta name="keywords" content="结缘,修证佛法,佛界之心,星路,杨宁易度门" />
-        <meta name="description" content="杨宁老师小说《佛界之心》结缘赠阅，静坐音乐结缘下载 - 易度门" />
+        <meta name="keywords" content="结缘,修证佛法,佛界之心,星路,杨宁易度门">
+        <meta name="description" content="杨宁老师小说《佛界之心》结缘赠阅，静坐音乐结缘下载 - 易度门">
         <%@include file="/WEB-INF/jspf/header.jspf" %>
-        <script type="text/cjs" data-cjssrc="http://yjs.yidumen.com/yidumen/web/js/goods.js"></script>
-	<script type="text/javascript" src="http://yjs.yidumen.com/yidumen/web/js/jquery.corner.js"></script>
-        <script type="text/javascript" src="http://yjs.yidumen.com/yidumen/web/js/corner.js"></script>
     </head>
 
     <body>
@@ -19,12 +16,12 @@
         <!--web container width:990px-->
         <div id="container">
             <div id="goods_heart">
-                <div class="goods_img_area"><img src="http://yimg.yidumen.com/yidumen/web/images/book.png" /></div>
+                <div class="goods_img_area"><img alt="book" src="/resources/web/images/book.png" /></div>
                 <div class="goods_index_intro">
                     <h6>小说《法界之心》结缘赠阅</h6>
                     <p>一切众生皆具如来智慧德相，皆因分别执着不能证得。这是法身佛的智慧，这种智慧即<span>法界之心</span></p>
                     <div class="goods_index_post"> 
-                        <form id="goodsfrm" name="goodsfrm" action="goods" method="post">
+                        <form id="goodsfrm" name="goodsfrm" method="post">
                             <div>请正确填写邮寄信息，我们将在三个工作日之内进行快递送件</div>
                             <input type="button" id="submit_img" value="&nbsp;" class="goods_button" />
                             收件人姓名：<input type="text" id="name" name="name" class="goods_input_name" maxlength="15"/> 
@@ -45,27 +42,27 @@
                 </div>
             </div>
             <div id="goods_star">
-                <div class="goods_img_area"><img src="http://yimg.yidumen.com/yidumen/web/images/novel.png" /></div>
+                <div class="goods_img_area"><img alt="novel" src="/resources/web/images/novel.png" /></div>
                 <div class="goods_index_intro">
                     <h6>科幻故事《星路》</h6>
                     <p>在遥远的银河系中央，有一颗星球，这儿的生命都是光化身，他们神通很大，可以像佛教中的观世音菩萨一样，个个随心念所想，变出千手千眼。 有一个国王统治着整个星球，他的名字叫多宝如意王，他有一个女儿，叫大悲</p>
                     <div class="goods_star_list">
                         在线阅读
                         <ul>
-                            <li>01 <a href="/awaken_journey/1148">接受使命</a></li>
-                            <li>02 <a href="/awaken_journey/1149">到A星球</a></li>
-                            <li>03 <a href="/awaken_journey/1150">穿越魔宫</a></li>
-                            <li>04 <a href="/awaken_journey/1151">进入佛幻境</a></li>
-                            <li>05 <a href="/awaken_journey/1152">进入光幻境</a></li>
-                            <li>06 <a href="/awaken_journey/1153">踏上缘起岛</a></li>
-                            <li>07 <a href="/awaken_journey/1154">完成使命</a></li>
+                            <li>01 <a href="/awaken_journey/278">接受使命</a></li>
+                            <li>02 <a href="/awaken_journey/279">到A星球</a></li>
+                            <li>03 <a href="/awaken_journey/280">穿越魔宫</a></li>
+                            <li>04 <a href="/awaken_journey/281">进入佛幻境</a></li>
+                            <li>05 <a href="/awaken_journey/282">进入光幻境</a></li>
+                            <li>06 <a href="/awaken_journey/283">踏上缘起岛</a></li>
+                            <li>07 <a href="/awaken_journey/284">完成使命</a></li>
                         </ul>
                         <span>您也可以直接下载本书电子版本（<a href="http://v3.yidumen.com/doc/星路.pdf">PDF版本</a> | <a href="http://v3.yidumen.com/doc/星路.rtf">RTF版本</a>）</span>
                     </div>
                 </div>
             </div>
             <div id="goods_music">
-                <div class="goods_img_area"><img src="http://yimg.yidumen.com/yidumen/web/images/cd.png" /></div>
+                <div class="goods_img_area"><img alt="cd" src="/resources/web/images/cd.png" /></div>
                 <div class="goods_index_intro">
                     <h6>静坐音乐下载</h6>
                     <p>初涉修证，合适的音乐可以帮助你放松身心，更快地进入状态。请从以下链接下载各种功用音乐，并根据音乐内语音的引导，逐步体验不同的身心境界。</p>
@@ -107,5 +104,8 @@
         </div>
         <!-- web container width:990px-->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
+        <script type="text/javascript" src="/resources/web/js/goods.js"></script>
+	<script type="text/javascript" src="/resources/web/js/jquery.corner.js"></script>
+        <script type="text/javascript" src="/resources/web/js/corner.js"></script>
     </body>
 </html>

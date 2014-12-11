@@ -20,7 +20,7 @@
             <div id="video_box_large">
                 <video id="video-player"
                        class="video-js vjs-default-skin vjs-big-play-centered"
-                       poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+                       poster="/resources/web/images/bg_video.png"
                        data-setup='{ "controls": true, "autoplay": false, "preload": "auto", "width":"100%", "height":"100%" }'
                        controls>
                     <c:forEach begin="0" end="3" items="${videos}" var="video">

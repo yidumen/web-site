@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -49,7 +49,7 @@
         <!-- -->
         <!--web footer width:100% -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
-        <script type="text/javascript" src="http://yjs.yidumen.com/yidumen/web/js/jwplayer/jwplayer.js"></script>
+        <script type="text/javascript" src="/resources/web/js/jwplayer/jwplayer.js"></script>
         <script type="text/javascript">jwplayer.key = "J43xbL7zqK42QQgUPzW++yE6Xme4o5wMjehIeQ==";</script>
         <script type="text/javascript">
             var jwplayerImpl = jwplayer("Player_01");
@@ -63,7 +63,7 @@
                 abouttext: "Yidumen.com",
                 aboutlink: "http://www.yidumen.com",
                 playlist: [{
-                        image: "http://yimg.yidumen.com/yidumen/web/images/bg_video.png",
+                        image: "/resources/web/images/bg_video.png",
                         title: "${video.title}",
                         sources: [{
                                 file: "http://v3.yidumen.com/video/720/${video.file}_720.mp4",
@@ -88,7 +88,7 @@
         </script>
         <script>
             jwplayer().addButton(
-                    "http://yimg.yidumen.com/yidumen/web/images/dl_video.png",
+                    "/resources/web/images/dl_video.png",
                     "下载视频",
                     function () {
                         var filename = jwplayer().getPlaylist()[0].sources[0].file;

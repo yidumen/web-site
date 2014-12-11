@@ -31,7 +31,16 @@ public class BuddhismController {
         model.addAttribute("study", sutraService.findStudyBuddhims());
         model.addAttribute("known", sutraService.findKnownBuddhism());
         model.addAttribute("nav", 3);
-        return "buddhism/list";
+        if (device.isNormal()) {
+            return "buddhism/list";
+        } else {
+            return "mobile/buddhism/list";
+        }
+    }
+
+    @RequestMapping("special")
+    public String viewSpecial() {
+        return "mobile/buddhism/view1";
     }
 
     @RequestMapping("known")
@@ -40,7 +49,7 @@ public class BuddhismController {
         model.addAttribute("title", "了解佛教");
         model.addAttribute("path", "known");
         model.addAttribute("nav", 3);
-        return "buddhism/directory";
+        return responseDirectory(device);
     }
 
     @RequestMapping("study")
@@ -49,7 +58,7 @@ public class BuddhismController {
         model.addAttribute("title", "学习佛法");
         model.addAttribute("path", "study");
         model.addAttribute("nav", 3);
-        return "buddhism/directory";
+        return responseDirectory(device);
     }
 
     @RequestMapping("practice")
@@ -58,7 +67,7 @@ public class BuddhismController {
         model.addAttribute("title", "修证佛法");
         model.addAttribute("path", "practice");
         model.addAttribute("nav", 3);
-        return "buddhism/directory";
+        return Util.responsePage(device, "buddhism/directory_1");
     }
 
     @RequestMapping("known/{id}")
@@ -66,7 +75,7 @@ public class BuddhismController {
         initViewModel(id, model);
         model.addAttribute("path", "known");
         model.addAttribute("title", "了解佛教");
-        return "buddhism/view";
+        return responseView(device);
     }
 
     @RequestMapping("study/{id}")
@@ -74,7 +83,7 @@ public class BuddhismController {
         initViewModel(id, model);
         model.addAttribute("path", "study");
         model.addAttribute("title", "学习佛法");
-        return "buddhism/view";
+        return responseView(device);
     }
 
     @RequestMapping("practice/{id}")
@@ -82,7 +91,7 @@ public class BuddhismController {
         initViewModel(id, model);
         model.addAttribute("path", "practice");
         model.addAttribute("title", "修证佛法");
-        return "buddhism/view";
+        return responseView(device);
     }
 
     @RequestMapping(value = "loadmore/{id}", method = RequestMethod.GET, produces = {"text/html;charset=utf-8"})
@@ -102,4 +111,19 @@ public class BuddhismController {
         model.addAttribute("nav", 3);
     }
 
+    private String responseDirectory(Device device) {
+        if (device.isNormal()) {
+            return "buddhism/directory";
+        } else {
+            return "mobile/buddhism/directory";
+        }
+    }
+
+    private String responseView(Device device) {
+        if (device.isNormal()) {
+            return "buddhism/view";
+        } else {
+            return "mobile/buddhism/view";
+        }
+    }
 }

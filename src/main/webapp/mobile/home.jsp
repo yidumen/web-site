@@ -16,7 +16,7 @@
             <!--杨宁老师微博 -->
             <a href="/yangning.jsp">
                 <div id="teacher_area">
-                    <div id="teacher_area_imgbox"><img alt="teacher" src="http://yimg.yidumen.com/yidumen/mobile/images/yangning.jpg" /></div>
+                    <div id="teacher_area_imgbox"><img alt="teacher" src="/resources/mobile/images/yangning.jpg" /></div>
                     <div id="teacher_area_txt">
                         关于杨宁老师<br />
                         <span>二十年前，年轻、好奇、充满生活激情的她为了探寻“生命的奥秘”踏上了修证佛法之路。</span> <span class="blue">点击查看</span>

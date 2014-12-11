@@ -18,11 +18,11 @@
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js" ></script>
 <script type="text/javascript">
     var cjsscript = document.createElement('script');
-    cjsscript.src = "http://yjs.yidumen.com/yidumen/web/js/control.js";
+    cjsscript.src = "/resources/web/js/control.js";
     var cjssib = document.getElementsByTagName('script')[0];
     cjssib.parentNode.insertBefore(cjsscript, cjssib);
 </script>
-<script type="text/cjs" data-cjssrc="http://yjs.yidumen.com/yidumen/web/js/baseCookie.js"></script>
-<script type="text/cjs" data-cjssrc="http://yjs.yidumen.com/yidumen/web/js/input_submit.js"></script>
-<script type="text/cjs" data-cjssrc="http://yjs.yidumen.com/yidumen/web/js/yidumen_all.js"></script>
-<script type="text/javascript" src="http://yjs.yidumen.com/yidumen/web/js/ie6_png.js"></script>
+<script type="text/cjs" data-cjssrc="/resources/web/js/baseCookie.js"></script>
+<script type="text/cjs" data-cjssrc="/resources/web/js/input_submit.js"></script>
+<script type="text/cjs" data-cjssrc="/resources/web/js/yidumen_all.js"></script>
+<script type="text/javascript" src="/resources/web/js/ie6_png.js"></script>

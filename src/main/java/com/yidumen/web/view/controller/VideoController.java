@@ -48,10 +48,6 @@ public final class VideoController {
         model.addAttribute("videos", videos);
         model.addAttribute("recommend", recommend);
         model.addAttribute("nav", 4);
-        if (device.isMobile()) {
-            return "mobile/video/view";
-        } else {
-            return "video/view";
-        }
+        return Util.responsePage(device, "video/view");
     }
 }

@@ -6,16 +6,16 @@
         <meta name="keywords" content="易度门,杨宁,修证佛法,妙法莲华经,法华经,结缘">
         <meta name="viewport" content="width=1020">
         <meta name="description" content="易度门，由杨宁老师建立的佛法修证网站，提供妙法莲华经，杨宁佛学视频等佛学资源，方便更多佛徒能从网站中修证佛法，学习佛法，了解佛法！">    
-        <link rel="icon" type="image/x-icon" href="http://yimg.yidumen.com/yidumen/web/images/favicon.ico">
-        <link rel="shortcut icon" type="image/x-icon" href="http://yimg.yidumen.com/yidumen/web/images/favicon.ico">
-        <link href="http://ycss.yidumen.com/yidumen/web/css/style.css" rel="stylesheet" type="text/css">
+        <link rel="icon" type="image/x-icon" href="/resources/web/images/favicon.ico">
+        <link rel="shortcut icon" type="image/x-icon" href="/resources/web/images/favicon.ico">
+        <link href="/resources/web/css/style.css" rel="stylesheet" type="text/css">
         <title>易度门首页 - 关于杨宁老师、修证佛法、妙法莲华经的教育性、非盈利性佛学网站</title>
     </head>
 
     <body class="index_bg">
         <!--web head width:990px -->
         <div id="header">
-            <a href="/"><img alt="logo" src="http://yimg.yidumen.com/yidumen/web/images/homepage_logo.jpg" id="logo"/></a>
+            <a href="/"><img alt="logo" src="/resources/web/images/homepage_logo.jpg" id="logo"/></a>
             <ul id="navigator">
                 <li><a href="/lotus/list" >妙法莲华</a></li>
                 <li><a href="/diamond/list" >金刚经</a></li>

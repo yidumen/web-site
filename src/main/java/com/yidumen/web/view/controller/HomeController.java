@@ -30,4 +30,8 @@ public final class HomeController {
         }
     }
 
+    @RequestMapping("teacher")
+    public String teacher() {
+        return "teacher";
+    }
 }

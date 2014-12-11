@@ -4,9 +4,10 @@
 <html>
     <head>
         <title>修证佛法、学习佛法、了解佛法 - 易度门</title>
-        <meta name="keywords" content="修证佛法,学习佛法,了解佛法,佛学基础,杨宁,易度门" />
-        <meta name="description" content="修证佛法、学习佛法、了解佛法 - 易度门" />
+        <meta name="keywords" content="修证佛法,学习佛法,了解佛法,佛学基础,杨宁,易度门">
+        <meta name="description" content="修证佛法、学习佛法、了解佛法 - 易度门">
         <%@include file="/WEB-INF/jspf/header.jspf" %>
+        <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
     </head>
     <body>
         <!--web head width:990px -->
@@ -17,7 +18,12 @@
             <h1 class="buddhism_index_title">信仰佛教<br />、学习佛法与修证佛法的区别</h1>
             <div id="buddhism_index_left">
                 <div id="video_box_small">
-                    <div id="Player_01">您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。</div>
+                    <video id="video-player"
+                           class="video-js vjs-default-skin vjs-big-play-centered"
+                           poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+                           data-setup='{ "controls": true, "autoplay": true, "width":"100%", "height":"100%" }'
+                           src="http://v3.yidumen.com/video/480/B0001_480.mp4">您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。
+                    </video>
                 </div>
                 <div class="buddhism_index_content">
                     <!--文字内容 -->
@@ -41,7 +47,7 @@
                 <dl class="buddhism_index_dl">
                     <dt>修证佛法</dt>
                     <dd>     
-                        <a href="/buddhism/practice"><img alt="视频讲义" src="http://yimg.yidumen.com/yidumen/web/images/video_hd.png" />修证佛法是在探索生命的全部奥秘和终极意义,是一条心灵成长之旅。是在身心两方面不断提升，圆满人的生命等级。修证佛法是让我们站在佛陀的角度去看宇宙和生命，而不是只知道佛陀说了什么……</a>
+                        <a href="/buddhism/practice"><img alt="视频讲义" src="/resources/web/images/video_hd.png" />修证佛法是在探索生命的全部奥秘和终极意义,是一条心灵成长之旅。是在身心两方面不断提升，圆满人的生命等级。修证佛法是让我们站在佛陀的角度去看宇宙和生命，而不是只知道佛陀说了什么……</a>
                         <span>
                             <select onchange="self.location.href = options[selectedIndex].value">
                                 <option value="/buddhism/practice" style="background-color:#959595; color:#e1e1e1">视频讲义</option>
@@ -56,7 +62,7 @@
                 <dl class="buddhism_index_dl">
                     <dt>学习佛法</dt>
                     <dd>
-                        <a href="/buddhism/study" ><img alt="视频讲义" src="http://yimg.yidumen.com/yidumen/web/images/video_hd.png" />释迦牟尼佛究竟讲了什么？为什么他的魅力历经两千六百多年依然经久不衰？为什么无数探索真理以及生命意义的人将他的开示作为生命航海中的灯塔，解脱身心束缚的依止？请关注佛陀的智慧，不管你是不是佛教徒……
+                        <a href="/buddhism/study" ><img alt="视频讲义" src="/resources/web/images/video_hd.png" />释迦牟尼佛究竟讲了什么？为什么他的魅力历经两千六百多年依然经久不衰？为什么无数探索真理以及生命意义的人将他的开示作为生命航海中的灯塔，解脱身心束缚的依止？请关注佛陀的智慧，不管你是不是佛教徒……
                         </a>
                         <span>
                             <select  onchange="self.location.href = options[selectedIndex].value">
@@ -80,7 +86,7 @@
                 <dl class="buddhism_index_dl">
                     <dt>了解佛教</dt>
                     <dd>
-                        <a href="/buddhism/known"><img alt="视频讲义" src="http://yimg.yidumen.com/yidumen/web/images/video_hd.png" />佛教创立已有两千六百多年的历史，记录释迦牟尼佛言行的典籍及后期大菩萨们的著述、讲解及开示，可谓是汗牛充栋。要想在如此久远和大量的论著中快速寻找捷径，俯视整个佛教历史，便成为学佛者入门的必要。</a>
+                        <a href="/buddhism/known"><img alt="视频讲义" src="/resources/web/images/video_hd.png" />佛教创立已有两千六百多年的历史，记录释迦牟尼佛言行的典籍及后期大菩萨们的著述、讲解及开示，可谓是汗牛充栋。要想在如此久远和大量的论著中快速寻找捷径，俯视整个佛教历史，便成为学佛者入门的必要。</a>
                         <span>
                             <select onchange="self.location.href = options[selectedIndex].value">       
                                 <option value="#" selected="selected">快速课程跳转</option>
@@ -104,50 +110,7 @@
         </div>
         <!-- -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
-        <script type="text/javascript" src="http://yjs.yidumen.com/yidumen/web/js/jwplayer/jwplayer.js"></script>
-        <script type="text/javascript">jwplayer.key = "J43xbL7zqK42QQgUPzW++yE6Xme4o5wMjehIeQ==";</script>
-        <script>
-            jwplayer("Player_01").setup({
-                width: "100%",
-                height: "100%",
-                autostart: false,
-                ga: {
-                    idstring: "信仰佛教、学习佛法与修证佛法的区别"
-                },
-                abouttext: "Yidumen.com",
-                aboutlink: "http://www.yidumen.com",
-                playlist: [{
-                        image: "http://yimg.yidumen.com/yidumen/web/images/bg_video.png",
-                        title: "信仰佛教、学习佛法与修证佛法的区别",
-                        sources: [{
-                                file: "http://v3.yidumen.com/video/720/B0001_720.mp4",
-                                label: "720p 高清",
-                                width: 1280,
-                                height: 720
-                            }, {
-                                file: "http://v3.yidumen.com/video/480/B0001_480.mp4",
-                                label: "480p 标清",
-                                width: 854,
-                                height: 480
-                            }, {
-                                file: "http://v3.yidumen.com/video/360/B0001_360.mp4",
-                                label: "360p 流畅",
-                                "default": true,
-                                width: 640,
-                                height: 360
-                            }]
-                    }]
-            });
-        </script>
-        <script>
-            jwplayer().addButton(
-                    "http://yimg.yidumen.com/yidumen/web/images/dl_video.png",
-                    "下载视频",
-                    function () {
-                        window.location.href = jwplayer().getPlaylist()[0].sources[0].file;
-                    },
-                    "download"
-                    );
-        </script>
+        <script type="text/javascript" src="/resources/web/js/video-js/video.js"></script>
+        <script type="text/javascript" src="/resources/web/js/video-js/lang/zh.js"></script>
     </body>
 </html>

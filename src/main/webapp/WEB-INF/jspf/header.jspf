@@ -1,8 +1,8 @@
 <%@page contentType="text/html" pageEncoding="utf-8"%>
 <meta charset="utf-8">
-<meta name=“msapplication-TileImage” content=“http://yimg.yidumen.com/yidumen/web/images/msapplication-TileImage.png”>
+<meta name=“msapplication-TileImage” content=“/resources/web/images/msapplication-TileImage.png”>
 <meta name=“msapplication-TileColor” content=“#ffcf65”>
 <meta name="viewport" content="width=1020" />
-<link href="http://yimg.yidumen.com/yidumen/web/images/favicon.ico" rel="icon" type="image/x-icon" />
-<link href="http://yimg.yidumen.com/yidumen/web/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-<link href="http://yimg.yidumen.com/yidumen/web/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/resources/web/images/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/web/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="/resources/web/css/style.css" rel="stylesheet" type="text/css" />

@@ -1,12 +1,12 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<script type="text/javascript" src="http://yjs.yidumen.com/yidumen/web/js/jwplayer/jwplayer.js"></script>
+<script type="text/javascript" src="/resources/web/js/jwplayer/jwplayer.js"></script>
 <script type="text/javascript">jwplayer.key = "J43xbL7zqK42QQgUPzW++yE6Xme4o5wMjehIeQ==";</script>
 <dl class="r_reading">
     <dt>朗读本课</dt>
     <dd>
         <!--播放按钮 -->
-        <div style="width:150px; font-size:10px; background:bottom url(http://yimg.yidumen.com/yidumen/web/images/audio_bg.png) repeat-x; height:30px; border-right:4px solid #c4c4c4">
-            <div style="width:118px; background:bottom url(http://yimg.yidumen.com/yidumen/web/images/audio_bg.png) repeat-x; overflow:hidden; height:30px; padding:-10px;">
+        <div style="width:150px; font-size:10px; background:bottom url(/resources/web/images/audio_bg.png) repeat-x; height:30px; border-right:4px solid #c4c4c4">
+            <div style="width:118px; background:bottom url(/resources/web/images/audio_bg.png) repeat-x; overflow:hidden; height:30px; padding:-10px;">
                 <div id="myElement"></div>
             </div>
         </div>

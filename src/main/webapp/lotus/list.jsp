@@ -8,8 +8,8 @@
         <meta name="keywords" content="妙法莲华经,妙法莲华经全文,妙法莲华经白话释义,妙法莲华经下载, 法华经,杨宁,易度门">
         <meta name="description" content="妙法莲华经，妙法莲华经全文，妙法莲华经下载，杨宁带你漫游妙法莲华 – 易度门">   
         <%@include file="/WEB-INF/jspf/header.jspf" %>
-        <link rel="stylesheet" href="/resources/video-js/video-js.min.css">
-        <link rel="stylesheet" href="/resources/video-js/yidumen-player.css">
+        <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
+        <link rel="stylesheet" href="/resources/web/js/video-js/yidumen-player.css">
     </head>
     <body>
         <!--web head width:990px -->
@@ -17,12 +17,12 @@
         <!--/web head -->
         <!--web container width:990px-->
         <div id="container">
-            <div id="video_box_large">
-                <video id="video-player"
+            <div id="video_box_large" style="width:990px; height:441px;">
+                <video id="video-player" style="float: left"
                        class="video-js vjs-default-skin vjs-big-play-centered"
-                       poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+                       poster="/resources/web/images/bg_video.png"
                        >您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。</video>
-                <ul id="listbar"></ul>
+                <ul id="listbar" style="width:206px;float:right"></ul>
             </div>
             <div id="General_left">
                 <dl id="lotus_intro">
@@ -64,9 +64,9 @@
         <!-- -->
         <!--web footer width:100% -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
-        <script type="text/javascript" src="/resources/video-js/video.js"></script>
-        <script type="text/javascript" src="/resources/video-js/lang/zh.js"></script>
-        <script type="text/javascript" src="/resources/video-js/yidumen-player.js"></script>
+        <script type="text/javascript" src="/resources/web/js/video-js/video.js"></script>
+        <script type="text/javascript" src="/resources/web/js/video-js/lang/zh.js"></script>
+        <script type="text/javascript" src="/resources/web/js/video-js/yidumen-player.js"></script>
         <script>
             playlist = [{
                     file: "A0001",
@@ -92,10 +92,9 @@
                 }];
             var vjs = videojs("video-player", {
                 "controls": true,
-                "autoplay": false,
-                "preload": false,
-                "width": "720",
-                "height": "480",
+                "autoplay": true,
+                "width": 784,
+                "height": "100%",
                 plugins: {
                     ydmPlayer: playlist
                 }

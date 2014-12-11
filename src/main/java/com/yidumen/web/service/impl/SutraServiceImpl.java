@@ -132,7 +132,7 @@ public class SutraServiceImpl implements SutraService, Serializable {
 
     @Override
     public List<Sutra> findHeartOfDharmaRealm() {
-        return sutraDao.find(436, 565);
+        return sutraDao.find(569, 698);
     }
 
     @Override
@@ -142,7 +142,7 @@ public class SutraServiceImpl implements SutraService, Serializable {
 
     @Override
     public List<Sutra> findStarWay() {
-        return sutraDao.find(420, 435);
+        return sutraDao.find(553, 568);
     }
 
     @Override

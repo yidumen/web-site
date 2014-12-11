@@ -34,6 +34,7 @@
                 <value>com.yidumen.dao.entity.UserMessage</value>
                 <value>com.yidumen.dao.entity.Video</value>
                 <value>com.yidumen.dao.entity.VideoInfo</value>
+                <value>com.yidumen.dao.entity.Goods</value>
             </array>
         </property>
     </bean>

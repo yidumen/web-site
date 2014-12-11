@@ -10,7 +10,7 @@
             <jsp:param name="partid" value="${sutra.partIdentifier}"/>
         </jsp:include>
         <%@include file="/WEB-INF/jspf/header.jspf" %>
-        <script src="http://yjs.yidumen.com/yidumen/web/js/loadmore.js"></script>
+        <script src="/resources/web/js/loadmore.js"></script>
     </head>
 
     <body>

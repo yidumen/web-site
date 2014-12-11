@@ -17,13 +17,15 @@
         <!--/web head -->
         <!--web container width:990px-->
         <div id="container">
-            <div id="video_box_large" style="width:960px; height:428px;">
-                <video id="video-player"
-                       class="video-js vjs-default-skin vjs-big-play-centered"
-                       poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
-                       >您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。</video>
-                <ul id="listbar" style="width: 200px; float: right"></ul>
-            </div>
+            <div id="buddhism_003_list_video">
+                    <video id="video-player"
+                           class="video-js vjs-default-skin vjs-big-play-centered"
+                           poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+                           src="http://v3.yidumen.com/video/480/B0001_480.mp4"
+                           data-setup='{ "controls": true, "autoplay": true, "preload": "auto", "width":"100%", "height":"100%" }'>
+                        您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。
+                    </video>
+                </div>
 
 
             <div id="General_left">
@@ -56,25 +58,5 @@
         <script type="text/javascript" src="/resources/web/js/video-js/video.js"></script>
         <script type="text/javascript" src="/resources/web/js/video-js/lang/zh.js"></script>
         <script type="text/javascript" src="/resources/web/js/video-js/yidumen-player.js"></script>
-        <script>
-            var playlist = [
-            <c:forEach var="buddhism" items="${buddhisms}">
-                <c:if test="${buddhism.video != null}">
-            {file: "${buddhism.video.file}",
-                    title: "${buddhism.video.title}"
-            },
-                </c:if>
-            </c:forEach>
-            ];
-                    var vjs = videojs("video-player", {
-                    "controls": true,
-                            "autoplay": true,
-                            "width": "759",
-                            "height": "100%",
-                            plugins: {
-                            ydmPlayer: playlist
-                            }
-                    });
-        </script>
     </body>
 </html>

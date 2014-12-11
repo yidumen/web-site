@@ -21,7 +21,11 @@ public class GoodsServiceImpl implements GoodsService {
     private GoodsDAO goodsDAO;
 
     @Override
-    public void create(Goods goods) {
+    public void create(String name, String telphone, String address) {
+        Goods goods = new Goods();
+        goods.setName(name);
+        goods.setPhone(telphone);
+        goods.setAddress(address);
         goods.setCreatedate(new Date());
         goods.setStatus(GoodsStatus.WAIT);
         goodsDAO.create(goods);
