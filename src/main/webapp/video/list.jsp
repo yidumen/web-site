@@ -7,7 +7,8 @@
         <meta name="keywords" content="杨宁,杨宁老师,佛学视频,杨宁佛学,佛学视频下载" />
         <meta name="description" content="杨宁老师佛学视频 在线观看 - 易度门" />
         <%@include file="/WEB-INF/jspf/header.jspf" %>
-        <link rel="stylesheet" href="/resources/video-js/video-js.min.css">
+        <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
+        <link rel="stylesheet" href="/resources/web/js/video-js/yidumen-player.css">
     </head>
 
     <body>
@@ -20,12 +21,8 @@
             <div id="video_box_large">
                 <video id="video-player"
                        class="video-js vjs-default-skin vjs-big-play-centered"
-                       poster="/resources/web/images/bg_video.png"
-                       data-setup='{ "controls": true, "autoplay": false, "preload": "auto", "width":"100%", "height":"100%" }'
-                       controls>
-                    <c:forEach begin="0" end="3" items="${videos}" var="video">
-                        <source src="http://v3.yidumen.com/video/360/${video.file}_360.mp4" type="video/mp4">
-                    </c:forEach>  
+                       poster="/resources/web/images/bg_video.png">
+
                 </video>
             </div>
             <h5 id="video_large_title" class="video_large_title"></h5>
@@ -53,5 +50,26 @@
         <!--web footer width:100% -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
         <script type="text/javascript" src="/resources/video-js/video.js"></script>
+        <script type="text/javascript" src="/resources/web/js/video-js/video.js"></script>
+        <script type="text/javascript" src="/resources/web/js/video-js/lang/zh.js"></script>
+        <script type="text/javascript" src="/resources/web/js/video-js/yidumen-player.js"></script>
+        <script>
+            var playlist = [
+            <c:forEach begin="0" end="3" items="${videos}" var="video">
+                {file: "${video.file}",
+                    title: "${video.title}"
+                },
+            </c:forEach>
+            ];
+            var vjs = videojs("video-player", {
+                "controls": true,
+                "autoplay": true,
+                "width": "100%",
+                "height": "100%",
+                plugins: {
+                    ydmPlayer: playlist
+                }
+            });
+        </script>
     </body>
 </html>

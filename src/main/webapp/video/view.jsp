@@ -7,6 +7,7 @@
         <meta name="keywords" content="${video.title},杨宁视频,佛学视频,杨宁老师,易度门">
         <meta name="description" content="${video.title},杨宁老师佛学视频 在线观看 – 易度门">
         <%@include file="/WEB-INF/jspf/header.jspf" %>
+        <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
     </head>
 
     <body>
@@ -17,7 +18,13 @@
         <!--web container width:990px-->
         <div id="container">
             <div id="video_box_large">
-                <div id="Player_01">您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。</div>
+                <video id="video-player"
+                       class="video-js vjs-default-skin vjs-big-play-centered"
+                       poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+                       src="http://v3.yidumen.com/video/480/${video.file}_480.mp4"
+                       data-setup='{ "controls": true, "autoplay": true, "width":"100%", "height":"100%" }'>
+                    您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。
+                </video>
             </div>
             <h5 id="video_large_title" class="video_large_title">${video.title}</h5>
             <div id="General_left">
@@ -49,55 +56,7 @@
         <!-- -->
         <!--web footer width:100% -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
-        <script type="text/javascript" src="/resources/web/js/jwplayer/jwplayer.js"></script>
-        <script type="text/javascript">jwplayer.key = "J43xbL7zqK42QQgUPzW++yE6Xme4o5wMjehIeQ==";</script>
-        <script type="text/javascript">
-            var jwplayerImpl = jwplayer("Player_01");
-            jwplayerImpl.setup({
-                width: "100%",
-                height: "100%",
-                autostart: false,
-                ga: {
-                    idstring: "${video.title}"
-                },
-                abouttext: "Yidumen.com",
-                aboutlink: "http://www.yidumen.com",
-                playlist: [{
-                        image: "/resources/web/images/bg_video.png",
-                        title: "${video.title}",
-                        sources: [{
-                                file: "http://v3.yidumen.com/video/720/${video.file}_720.mp4",
-                                label: "720p 高清",
-                                width: 1280,
-                                height: 720
-                            }, {
-                                file: "http://v3.yidumen.com/video/480/${video.file}_480.mp4",
-                                "default": true,
-                                label: "480p 标清",
-                                width: 854,
-                                height: 480
-                            }, {
-                                file: "http://v3.yidumen.com/video/360/${video.file}_360.mp4",
-                                label: "360p 流畅",
-                                width: 640,
-                                height: 360
-
-                            }]
-                    }]
-            });
-        </script>
-        <script>
-            jwplayer().addButton(
-                    "/resources/web/images/dl_video.png",
-                    "下载视频",
-                    function () {
-                        var filename = jwplayer().getPlaylist()[0].sources[0].file;
-                        filename = filename.replace("video", "video_dl");
-                        filename = filename.replace("${video.file}", "${video.file}_${video.title}");
-                                        window.location.href = filename;
-                                    },
-                                    "download"
-                                    );
-        </script>
+        <script type="text/javascript" src="/resources/web/js/video-js/video.js"></script>
+        <script type="text/javascript" src="/resources/web/js/video-js/lang/zh.js"></script>
     </body>
 </html>
