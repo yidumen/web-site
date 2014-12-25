@@ -31,8 +31,8 @@ public final class DiamondController {
     public String list(Model model,
                        Device device,
                        @CookieValue(value = "videoformat", defaultValue = "360") String videoFormat) {
-        final List<SutraModel> diamonds = sutraService.getDiamonds();
-        model.addAttribute("diamonds", diamonds);
+        model.addAttribute("diamonds", sutraService.getDiamonds());
+        model.addAttribute("notes", sutraService.findDiamondNotes());
         List<Video> videos = videoService.findDiamond();
         model.addAttribute("videos", videos);
         model.addAttribute("nav", 2);

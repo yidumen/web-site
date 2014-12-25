@@ -132,7 +132,7 @@ public class SutraServiceImpl implements SutraService, Serializable {
 
     @Override
     public List<Sutra> findHeartOfDharmaRealm() {
-        return sutraDao.find(569, 698);
+        return sutraDao.find(633, 762);
     }
 
     @Override
@@ -142,22 +142,27 @@ public class SutraServiceImpl implements SutraService, Serializable {
 
     @Override
     public List<Sutra> findStarWay() {
-        return sutraDao.find(553, 568);
+        return sutraDao.find(617, 632);
     }
 
     @Override
     public List<Sutra> findKnownBuddhism() {
-        return removeSubPage(sutraDao.find(257, 370));
+        return removeSubPage(sutraDao.find(321, 434));
     }
 
     @Override
     public List<Sutra> findStudyBuddhims() {
-        return removeSubPage(sutraDao.find(371, 540));
+        return removeSubPage(sutraDao.find(435, 604));
     }
 
     @Override
     public List<Sutra> findPracticeBuddhims() {
-        return removeSubPage(sutraDao.find(541, 552));
+        return removeSubPage(sutraDao.find(605, 616));
+    }
+    
+    @Override
+    public List<Sutra> findDiamondNotes() {
+        return removeSubPage(sutraDao.find(257, 320));
     }
 
     private List<Sutra> removeSubPage(final List<Sutra> sutras) {

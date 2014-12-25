@@ -25,16 +25,30 @@
                 <ul id="listbar" style="width: 200px; float: right"></ul>
             </div>
             <div id="General_left">
-                <dl id="lotus_list_area">
-                    <dt>原经文及现代白话释义（摘自中华书局出版的《白话佛教十三经》）</dt>
-                    <dd>
-                        <ul>
-                            <c:forEach var="item" items="${diamonds}">
-                                <li>${item.partIdentifier} <a href="/diamond/${item.originalId}">${item.title}</a>  <span><a href="/diamond/${item.vernacularId}">白话释义</a></span></li>
-                                </c:forEach>
-                        </ul>
-                    </dd>
-                </dl>
+                <div style="margin-top: 25px;margin-left: 10px">
+                    <dl style="font-size: 14px; color: #666">
+                        <dt>《金刚经》讲义</dt>
+                        <dd>
+                            <ul>
+                                <c:forEach var="item" items="${notes}">
+                                    <li style="margin-top: 25px; display: inline-block; min-width: 40%;padding-left: 10px"><a style="" href="/diamond/${item.id}">${item.title}</a></li>
+                                    </c:forEach>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+                <div>
+                    <dl id="lotus_list_area">
+                        <dt>原经文及现代白话释义（摘自中华书局出版的《白话佛教十三经》）</dt>
+                        <dd>
+                            <ul>
+                                <c:forEach var="item" items="${diamonds}">
+                                    <li>${item.partIdentifier} <a href="/diamond/${item.originalId}">${item.title}</a>  <span><a href="/diamond/${item.vernacularId}">白话释义</a></span></li>
+                                    </c:forEach>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
             </div>
             <div id="General_right">
                 <%@include file="/WEB-INF/jspf/weibo.jspf" %>

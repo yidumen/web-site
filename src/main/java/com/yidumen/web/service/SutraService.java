@@ -47,4 +47,6 @@ public interface SutraService {
 
     List<Video> findLoutsVideos();
 
+    List<Sutra> findDiamondNotes();
+
 }
