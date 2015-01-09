@@ -196,4 +196,10 @@ public class SutraServiceImpl implements SutraService, Serializable {
         return sutraDao.find(191, 256);
     }
 
+    @Override
+    public String generateHeartAudioSN(Sutra sutra) {
+        final long leftValue = sutra.getLeftValue();
+        return String.format("%02d", leftValue - 634);
+    }
+
 }

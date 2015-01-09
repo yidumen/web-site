@@ -49,4 +49,5 @@ public interface SutraService {
 
     List<Sutra> findDiamondNotes();
 
+    String generateHeartAudioSN(Sutra sutra);
 }

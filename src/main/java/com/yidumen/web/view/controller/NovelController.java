@@ -33,7 +33,7 @@ public final class NovelController {
         initViewModel(id, model);
         model.addAttribute("path", "heart_of_dharma_realm/list");
         model.addAttribute("title", "法界之心");
-        return Util.responsePage(device, "goods/view");
+        return Util.responsePage(device, "goods/view_heart");
     }
 
     @RequestMapping("awaken_journey/{id}")
@@ -47,6 +47,7 @@ public final class NovelController {
     private void initViewModel(Long id, Model model) {
         final Sutra sutra = sutraService.findSutra(id);
         model.addAttribute("buddhism", sutra);
+        model.addAttribute("mp3", sutraService.generateHeartAudioSN(sutra));
         model.addAttribute("prev", sutraService.findPreSutra(sutra));
         model.addAttribute("next", sutraService.findNextSutra(sutra));
         model.addAttribute("pageCount", sutraService.getPageCount(sutra));
