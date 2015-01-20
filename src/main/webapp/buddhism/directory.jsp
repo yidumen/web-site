@@ -58,23 +58,21 @@
         <script type="text/javascript" src="/resources/web/js/video-js/yidumen-player.js"></script>
         <script>
             var playlist = [
-            <c:forEach var="buddhism" items="${buddhisms}">
-                <c:if test="${buddhism.video != null}">
-            {file: "${buddhism.video.file}",
-                    title: "${buddhism.video.title}"
-            },
-                </c:if>
+            <c:forEach var="video" items="${videos}">
+                {file: "${video.file}",
+                    title: "${video.title}"
+                },
             </c:forEach>
             ];
-                    var vjs = videojs("video-player", {
-                    "controls": true,
-                            "autoplay": true,
-                            "width": "759",
-                            "height": "100%",
-                            plugins: {
-                            ydmPlayer: playlist
-                            }
-                    });
+            var vjs = videojs("video-player", {
+                "controls": true,
+                "autoplay": true,
+                "width": "759",
+                "height": "100%",
+                plugins: {
+                    ydmPlayer: playlist
+                }
+            });
         </script>
     </body>
 </html>
