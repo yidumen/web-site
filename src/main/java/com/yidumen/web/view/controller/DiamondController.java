@@ -4,8 +4,7 @@ import com.yidumen.dao.entity.Sutra;
 import com.yidumen.dao.entity.Video;
 import com.yidumen.web.service.SutraService;
 import com.yidumen.web.service.VideoService;
-import com.yidumen.web.view.model.SutraModel;
-import java.util.List;
+import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;
 import org.springframework.stereotype.Controller;
@@ -33,7 +32,7 @@ public final class DiamondController {
                        @CookieValue(value = "videoformat", defaultValue = "360") String videoFormat) {
         model.addAttribute("diamonds", sutraService.getDiamonds());
         model.addAttribute("notes", sutraService.findDiamondNotes());
-        List<Video> videos = videoService.findDiamond();
+        Set<Video> videos = videoService.findDiamond();
         model.addAttribute("videos", videos);
         model.addAttribute("nav", 2);
         if (device.isMobile()) {

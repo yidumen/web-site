@@ -16,7 +16,9 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,7 +52,7 @@ public class VideoServiceImpl implements VideoService {
         final List<VideoStatus> status = new ArrayList<>();
         status.add(VideoStatus.PUBLISH);
         model.setStatus2(status);
-        final List<Tag> tags = new ArrayList<>();
+        final Set<Tag> tags = new HashSet<>();
         Tag tag = tagDao.find("聊天室");
         tags.add(tag);
         model.setTags(tags);
@@ -226,7 +228,7 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public List<Video> findDiamond() {
+    public Set<Video> findDiamond() {
         Tag tag = new Tag();
         tag.setTagname("金刚经");
         tag.setType(TagType.COLUMN);

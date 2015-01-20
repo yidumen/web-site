@@ -7,6 +7,7 @@ import com.yidumen.dao.model.VideoQueryModel;
 import com.yidumen.web.view.model.VideoGroup;
 import com.yidumen.web.view.model.VideoShootDate;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -43,6 +44,6 @@ public interface VideoService {
 
     List<Tag> findTags(TagType type);
 
-    List<Video> findDiamond();
+    Set<Video> findDiamond();
     
 }
