@@ -1,7 +1,11 @@
 package com.yidumen.web.view.controller;
 
 import com.yidumen.dao.entity.Sutra;
+import com.yidumen.dao.entity.Video;
 import com.yidumen.web.service.SutraService;
+import java.util.LinkedHashSet;
+import java.util.List;
+import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,8 +48,17 @@ public class BuddhismController {
     }
 
     @RequestMapping("known")
-    public String knownDirectory(Model model, Device device) {
-        model.addAttribute("buddhisms", sutraService.findKnownBuddhism());
+    public String knownDirectory(final Model model, final Device device) {
+        final List<Sutra> sutras = sutraService.findKnownBuddhism();
+        model.addAttribute("buddhisms", sutras);
+        final Set<Video> videos = new LinkedHashSet<>();
+        for (Sutra sutra : sutras) {
+            if (null == sutra.getVideo()) {
+                continue;
+            }
+            videos.add(sutra.getVideo());
+        }
+        model.addAttribute("videos", videos);
         model.addAttribute("title", "了解佛教");
         model.addAttribute("path", "known");
         model.addAttribute("nav", 3);
@@ -53,8 +66,17 @@ public class BuddhismController {
     }
 
     @RequestMapping("study")
-    public String studyDirectory(Model model, Device device) {
-        model.addAttribute("buddhisms", sutraService.findStudyBuddhims());
+    public String studyDirectory(final Model model, final Device device) {
+        final List<Sutra> sutras = sutraService.findStudyBuddhims();
+        model.addAttribute("buddhisms", sutras);
+        final Set<Video> videos = new LinkedHashSet<>();
+        for (Sutra sutra : sutras) {
+            if (null == sutra.getVideo()) {
+                continue;
+            }
+            videos.add(sutra.getVideo());
+        }
+        model.addAttribute("videos", videos);
         model.addAttribute("title", "学习佛法");
         model.addAttribute("path", "study");
         model.addAttribute("nav", 3);
