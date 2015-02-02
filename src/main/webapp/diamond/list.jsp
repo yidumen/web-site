@@ -39,11 +39,11 @@
                 </div>
                 <div>
                     <dl id="lotus_list_area">
-                        <dt>原经文及现代白话释义（摘自中华书局出版的《白话佛教十三经》）</dt>
+                        <dt>金刚经</dt>
                         <dd>
                             <ul>
                                 <c:forEach var="item" items="${diamonds}">
-                                    <li>${item.partIdentifier} <a href="/diamond/${item.originalId}">${item.title}</a>  <span><a href="/diamond/${item.vernacularId}">白话释义</a></span></li>
+                                    <li>${item.partIdentifier} <a href="/diamond/${item.originalId}">${item.title}</a></li>
                                     </c:forEach>
                             </ul>
                         </dd>

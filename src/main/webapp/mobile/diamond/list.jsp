@@ -119,11 +119,11 @@
             </div>
             <h3>内容分享</h3>
             <%@include file="/WEB-INF/jspf/mobile/weibo.jspf" %>
-            <h3 id="lotus_sutra">金刚经原经文及白话释义<br /><span>目录</span></h3>
+            <h3 id="lotus_sutra">金刚经<br /><span>目录</span></h3>
             <div id="content_box">
                 <ul>
                     <c:forEach var="item" items="${diamonds}">
-                        <li>${item.partIdentifier} <a href="/diamond/${item.originalId}">${item.title}</a>//<span><a href="/diamond/${item.vernacularId}">白话释义</a></span></li>
+                        <li>${item.partIdentifier} <a href="/diamond/${item.originalId}">${item.title}</a></li>
                         </c:forEach>
                 </ul>
             </div>

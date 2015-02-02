@@ -47,10 +47,10 @@ public final class LotusController {
         model.addAttribute("prev", sutraService.findPreSutra(sutra));
         model.addAttribute("next", sutraService.findNextSutra(sutra));
         if (sutra.getLeftValue() > 8 && sutra.getRightValue() < 65) {
-            model.addAttribute("index", sutra.getLeftValue() - 8);
+            model.addAttribute("index", String.format("%02d", sutra.getLeftValue() - 8));
             model.addAttribute("title", "妙法莲华经原文");
         } else {
-            model.addAttribute("index", sutra.getLeftValue() - 66);
+            model.addAttribute("index", String.format("%02d", sutra.getLeftValue() - 66));
             model.addAttribute("title", "妙法莲华经白话释义");
         }
         model.addAttribute("original", sutraService.getLotusSutrasOriginal());

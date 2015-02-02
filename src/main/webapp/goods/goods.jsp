@@ -49,13 +49,13 @@
                     <div class="goods_star_list">
                         在线阅读
                         <ul>
-                            <li>01 <a href="/awaken_journey/278">接受使命</a></li>
-                            <li>02 <a href="/awaken_journey/279">到A星球</a></li>
-                            <li>03 <a href="/awaken_journey/280">穿越魔宫</a></li>
-                            <li>04 <a href="/awaken_journey/281">进入佛幻境</a></li>
-                            <li>05 <a href="/awaken_journey/282">进入光幻境</a></li>
-                            <li>06 <a href="/awaken_journey/283">踏上缘起岛</a></li>
-                            <li>07 <a href="/awaken_journey/284">完成使命</a></li>
+                            <li>01 <a href="/awaken_journey/310">接受使命</a></li>
+                            <li>02 <a href="/awaken_journey/311">到A星球</a></li>
+                            <li>03 <a href="/awaken_journey/312">穿越魔宫</a></li>
+                            <li>04 <a href="/awaken_journey/313">进入佛幻境</a></li>
+                            <li>05 <a href="/awaken_journey/314">进入光幻境</a></li>
+                            <li>06 <a href="/awaken_journey/315">踏上缘起岛</a></li>
+                            <li>07 <a href="/awaken_journey/316">完成使命</a></li>
                         </ul>
                         <span>您也可以直接下载本书电子版本（<a href="http://v3.yidumen.com/doc/星路.pdf">PDF版本</a> | <a href="http://v3.yidumen.com/doc/星路.rtf">RTF版本</a>）</span>
                     </div>

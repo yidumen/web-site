@@ -59,7 +59,7 @@
                     <dd>
                         <div style="width:150px; font-size:10px; background:bottom url(http://yimg.yidumen.com/yidumen/web/images/audio_bg.png) repeat-x; height:30px; border-right:4px solid #c4c4c4">
                             <div style="width:118px; background:bottom url(http://yimg.yidumen.com/yidumen/web/images/audio_bg.png) repeat-x; overflow:hidden; height:30px; padding:-10px;">
-                                <audio class="video-js vjs-default-skin" src="http://v3.yidumen.com/audio/heart_of_dharma_realm_${mp3}.mp3" data-setup='{ "controls": true, "autoplay": true, "preload": "auto", "width":"100%", "height":"100%" }'></audio>
+                                <audio src="http://v3.yidumen.com/audio/heart_of_dharma_realm_${mp3}.mp3" controls></audio>
                             </div>
                         </div>
                     </dd>

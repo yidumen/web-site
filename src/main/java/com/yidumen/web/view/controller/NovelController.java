@@ -33,7 +33,20 @@ public final class NovelController {
         initViewModel(id, model);
         model.addAttribute("path", "heart_of_dharma_realm/list");
         model.addAttribute("title", "法界之心");
-        return Util.responsePage(device, "goods/view_heart");
+        if (device.isNormal()) {
+            return "goods/view_heart";
+        } else {
+            return "mobile/goods/view";
+        }
+    }
+
+    @RequestMapping("awaken_journey/list")
+    public String startwayDirectory(Model model) {
+        model.addAttribute("buddhisms", sutraService.findStarWay());
+        model.addAttribute("title", "星路");
+        model.addAttribute("path", "awaken_journey");
+        model.addAttribute("nav", 5);
+        return "mobile/goods/directory";
     }
 
     @RequestMapping("awaken_journey/{id}")

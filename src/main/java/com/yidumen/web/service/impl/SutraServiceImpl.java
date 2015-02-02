@@ -117,12 +117,18 @@ public class SutraServiceImpl implements SutraService, Serializable {
 
     @Override
     public Sutra findPreSutra(Sutra sutra) {
-        return sutraDao.findByRightvalue(sutra.getLeftValue() - 1);
+        final Sutra result = sutraDao.findByRightvalue(sutra.getLeftValue() - 1);
+        return result;
     }
 
     @Override
     public Sutra findNextSutra(Sutra sutra) {
-        return sutraDao.findByLeftvalue(sutra.getRightValue() + 1);
+        final Sutra result = sutraDao.findByLeftvalue(sutra.getRightValue() + 1);
+        if (result != null && result.getContent() == null) {
+            return sutraDao.findByLeftvalue(result.getLeftValue() + 1);
+        } else {
+            return result;
+        }
     }
 
     @Override
@@ -159,7 +165,7 @@ public class SutraServiceImpl implements SutraService, Serializable {
     public List<Sutra> findPracticeBuddhims() {
         return removeSubPage(sutraDao.find(605, 616));
     }
-    
+
     @Override
     public List<Sutra> findDiamondNotes() {
         return removeSubPage(sutraDao.find(257, 320));
