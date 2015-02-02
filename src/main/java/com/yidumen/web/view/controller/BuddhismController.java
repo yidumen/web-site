@@ -89,7 +89,11 @@ public class BuddhismController {
         model.addAttribute("title", "修证佛法");
         model.addAttribute("path", "practice");
         model.addAttribute("nav", 3);
-        return Util.responsePage(device, "buddhism/directory_1");
+        if (device.isNormal()) {
+            return "buddhism/directory_1";
+        } else {
+            return "mobile/buddhism/directory";
+        }
     }
 
     @RequestMapping("known/{id}")

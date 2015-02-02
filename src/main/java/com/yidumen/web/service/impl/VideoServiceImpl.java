@@ -120,7 +120,7 @@ public class VideoServiceImpl implements VideoService {
     public List<Tag> findTags(TagType type) {
         Tag tag = new Tag();
         tag.setType(type);
-        return tagDao.find(tag);
+        return tagDao.find(tag, false);
     }
 
     @Override
@@ -232,7 +232,7 @@ public class VideoServiceImpl implements VideoService {
         Tag tag = new Tag();
         tag.setTagname("金刚经");
         tag.setType(TagType.COLUMN);
-        List<Tag> tags = tagDao.find(tag);
+        List<Tag> tags = tagDao.find(tag, false);
         return tags.get(0).getVideos();
     }
 }
