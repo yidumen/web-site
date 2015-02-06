@@ -69,9 +69,9 @@
                         {file: "W0005", title: "微博集合（五）"},
                         {file: "W0006", title: "微博集合（六）"},
                         {file: "W0007", title: "微博集合（七）"},
-                        {file: "W0008", title: "微博集合（八）"}
-                        {file: "W0009", title: "微博集合（九）"}
-                        {file: "W0010", title: "微博集合（十）"}
+                        {file: "W0008", title: "微博集合（八）"},
+                        {file: "W0009", title: "微博集合（九）"},
+                        {file: "W0010", title: "微博集合（十）"},
                         {file: "W0011", title: "微博集合（十一）"}
                     ];
                     var vjs = videojs("video-player", {
