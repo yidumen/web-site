@@ -56,6 +56,14 @@ public final class LotusController {
         model.addAttribute("original", sutraService.getLotusSutrasOriginal());
         model.addAttribute("vernacular", sutraService.getLotusSutrasVernacular());
         model.addAttribute("nav", 1);
-        return Util.responsePage(device, "lotus/view");
+        if (device.isNormal()) {
+            if (id == 2 || id == 3) {
+                return "/lotus/view_1";
+            } else {
+                return "/lotus/view";
+            }
+        } else {
+            return "/mobile/lotus/view";
+        }
     }
 }

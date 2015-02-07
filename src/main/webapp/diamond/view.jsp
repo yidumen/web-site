@@ -13,7 +13,7 @@
         <!--web container width:990px-->
         <div id="container">
             <div id="General_left">
-                <h1>金刚经原经文及释义</h1>
+                <h1>金刚经</h1>
                 <div id="content_box">
                     <h3><span>${sutra.partIdentifier} &#8226;</span>${sutra.title}</h3>
                     <div class="article_box" id="article_box">
