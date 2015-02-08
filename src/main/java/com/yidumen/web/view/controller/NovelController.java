@@ -46,7 +46,7 @@ public final class NovelController {
         model.addAttribute("title", "星路");
         model.addAttribute("path", "awaken_journey");
         model.addAttribute("nav", 5);
-        return "mobile/goods/directory";
+        return "mobile/goods/directory_star";
     }
 
     @RequestMapping("awaken_journey/{id}")
