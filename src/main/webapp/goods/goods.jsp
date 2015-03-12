@@ -21,7 +21,7 @@
                     <h6>小说《法界之心》结缘赠阅</h6>
                     <p>一切众生皆具如来智慧德相，皆因分别执着不能证得。这是法身佛的智慧，这种智慧即<span>法界之心</span></p>
                     <div class="goods_index_post"> 
-                        <form id="goodsfrm" name="goodsfrm" method="post">
+                        <form id="goodsfrm" action="/goods/getbook/process" name="goodsfrm" method="post">
                             <div>请正确填写邮寄信息，我们将在三个工作日之内进行快递送件</div>
                             <input type="button" id="submit_img" value="&nbsp;" class="goods_button" />
                             收件人姓名：<input type="text" id="name" name="name" class="goods_input_name" maxlength="15"/> 

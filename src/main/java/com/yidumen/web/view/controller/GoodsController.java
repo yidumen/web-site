@@ -26,7 +26,7 @@ public final class GoodsController {
         return Util.responsePage(device, "goods/goods");
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = {"getbook/process"},method = RequestMethod.POST)
     public String submit(@RequestParam String name,
                          @RequestParam String telphone,
                          @RequestParam String address,
@@ -38,6 +38,12 @@ public final class GoodsController {
         model.addAttribute("address", address);
         model.addAttribute("nav", 5);
         return Util.responsePage(device, "goods/success");
+    }
+    
+    @RequestMapping("getbook")
+    public String getBook(Model model, Device device) {
+        model.addAttribute("nav", 5);
+        return "mobile/goods/getbook";
     }
 
 }

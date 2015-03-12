@@ -16,7 +16,7 @@
             <div id="content_box">
                 <h3>小说《法界之心》结缘赠阅<br /><span>书籍赠阅</span></h3>
                 <div id="goods_txt">
-                    <form action="/goods" method="post">
+                    <form action="/goods/getbook/process" method="post">
                         <ul>
                             <li>请正确填写邮寄信息，我们将在三个工作日之内进行快递送件。</li>
                             <li>收件人姓名：<input type="text" name="name" style="width:12em" /></li>

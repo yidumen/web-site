@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- *
  * @author 蔡迪旻
  */
 @Controller
@@ -19,7 +18,7 @@ public final class HomeController {
     @Autowired
     private VideoService vs;
 
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = {RequestMethod.GET, RequestMethod.HEAD})
     public String welcome(Device device, Model model) {
         if (device.isMobile()) {
             model.addAttribute("nav", 0);
@@ -31,7 +30,7 @@ public final class HomeController {
     }
 
     @RequestMapping("teacher")
-    public String teacher() {
-        return "teacher";
+    public String teacher(Device device) {
+        return Util.responsePage(device, "teacher");
     }
 }

@@ -13,3 +13,4 @@ hs_err_pid*
 /nb*
 /target/
 web-site.iml
+.idea

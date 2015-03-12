@@ -14,7 +14,7 @@
         <div id="main_container">
             <h3><a href="life_purpose.jsp">你准备用“这一生”做什么？</a></h3>
             <!--杨宁老师微博 -->
-            <a href="/yangning.jsp">
+            <a href="/teacher">
                 <div id="teacher_area">
                     <div id="teacher_area_imgbox"><img alt="teacher" src="/resources/mobile/images/yangning.jpg" /></div>
                     <div id="teacher_area_txt">
@@ -27,16 +27,16 @@
             <h3>妙法莲华</h3>
             <div id="index_list">
                 <a href="/lotus/list">妙法莲华经概述</a> <span class="video_label">&nbsp;</span><br />
-                <a href="/lotus/1995">《妙法莲华经》在说什么？《妙法莲华经》在佛法中的地位和价值</a><br />
-                <a href="/lotus/2054">《妙法莲华经》对现代众生的意义</a><br/>
+                <a href="/lotus/2">《妙法莲华经》在说什么？《妙法莲华经》在佛法中的地位和价值</a><br />
+                <a href="/lotus/3">《妙法莲华经》对现代众生的意义</a><br/>
                 <a href="/lotus/list#lotus_sutra">原文及现代白话释义</a>
             </div>
             <h3>佛法</h3>
             <div id="index_list">
-                <a href="/buddhism/1937">信仰佛教、学习佛法与修证佛法的区别</a> <span class="video_label">&nbsp;</span><br />
-                <a href="/buddhism/1936">修证佛法</a> <span class="video_label">&nbsp;</span><br/>
-                <a href="/buddhism/1935">学习佛法</a><br/>
-                <a href="/buddhism/1934">了解佛教</a>
+                <a href="/buddhism/special">信仰佛教、学习佛法与修证佛法的区别</a> <span class="video_label">&nbsp;</span><br />
+                <a href="/buddhism/practice">修证佛法</a> <span class="video_label">&nbsp;</span><br/>
+                <a href="/buddhism/study">学习佛法</a><br/>
+                <a href="/buddhism/known">了解佛教</a>
             </div>
             <h3>视频</h3>
             <div id="index_list">
