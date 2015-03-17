@@ -7,7 +7,7 @@
         <meta name="description" content="关于杨宁老师，杨宁老师修证佛法之路 – 易度门">
         <meta name="viewport" content="width=1020" />
         <title>关于杨宁老师 修证佛法 – 易度门</title>
-        <link href="/resources/web/css/style.css" rel="stylesheet">
+        <link href="/resources/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
         <link rel="stylesheet" href="/resources/web/js/video-js/yidumen-player.css">
     </head>
