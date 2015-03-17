@@ -1,0 +1,2476 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    border: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: #3366ff;
+}
+
+a:visited {
+    color: #0645ad;
+    text-decoration: none
+}
+
+dl, dt, dd, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    float: left;
+    width: 20px;
+    letter-spacing: 3px;
+    margin: 0 0 0 10px;
+    font-size: 22px;
+    font-family: 楷体_GB2312, 楷体, STKaiti, BiauKai, kaitiRegular, sans-serif;
+    font-weight: normal;
+    line-height: 50px;
+}
+
+h1 a {
+    color: #000;
+    display: block;
+}
+
+h2 {
+    font-size: 16px;
+    color: #666;
+    margin: 0 0 30px;
+    font-weight: normal;
+}
+
+h3 {
+
+    display: inline;
+    margin: 0;
+    background-color: #eee;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: normal;
+    padding: 4px 10px 4px 0;
+    border-radius: 5px;
+}
+
+h3 span {
+    background-color: #ffbdbd;
+    line-height: 24px;
+    padding: 4px 10px;
+    margin-right: 8px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+h4, h5 {
+    font-size: 14px;
+    font-weight: normal;
+    clear: both;
+}
+
+h5 {
+    word-spacing: 5px;
+    margin: 15px 0;
+}
+
+.f_left {
+    float: left;
+    margin-top: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+textarea {
+    overflow: hidden;
+}
+
+input {
+    border-radius: 5px;
+}
+
+/*=================================网页头部样式================================*/
+#header {
+    width: 990px;
+    margin: 12px auto;
+    height: auto;
+    overflow: auto;
+}
+
+#logo {
+    float: left;
+}
+
+.nav_yangning {
+    width: 120px;
+    height: 48px;
+    float: right;
+    display: block;
+    _margin-right: -40px;
+    background: url('/resources/web/images/yidumen.png') no-repeat;
+}
+
+#navigator {
+    float: right;
+    margin: 16px 0 0;
+    padding: 0;
+    font-family: 楷体_GB2312, 楷体, STKaiti, BiauKai, kaitiRegular, sans-serif;
+    height: 45px;
+}
+
+#navigator li {
+    list-style: none;
+    float: left;
+    margin-left: 30px;
+    height: 27px;
+    padding: 3px 8px 15px;
+}
+
+#navigator li a:hover, #navigator .current_nav {
+    border-bottom: 2px solid #FE7F7F;
+}
+
+#navigator li a {
+    font-size: 22px;
+    color: #000;
+    display: block;
+}
+
+.friends {
+    background: #fafafa;
+    border-radius: 7px;
+}
+
+.friends a:hover {
+    border: none;
+}
+
+.nav_notice {
+    position: absolute;
+    z-index: 100;
+    width: 333px;
+    min-height: 50px;
+    background: #fff;
+    border-top: none;
+    border-radius: 7px;
+    margin-left: 656px;
+    margin-top: 50px;
+    display: none;
+    padding: 0 1px 1px;
+}
+
+.nav_notice_inside {
+    min-height: 36px;
+    background: #fafafa;
+    padding: 8px 2px 8px 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.nav_notice_inside .friend_login span {
+    margin-right: 110px;
+    margin-left: 5px;
+}
+
+.nav_notice_inside .friend_login input {
+    margin-top: 3px;
+}
+
+.nav_notice_inside .friend_login .input_text {
+    width: 150px;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #666
+}
+
+.nav_notice_inside .friend_login .input_password {
+    width: 90px;
+    height: 22px;
+    line-height: 22px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    color: #666;
+}
+
+.nav_notice_inside .friend_login .button {
+    background: url(/resources/web/images/yidumen.png) no-repeat -130px 0;
+    height: 24px;
+    width: 50px;
+    border: none;
+    margin-left: 10px;
+    color: #fff;
+    text-align: center
+}
+
+.nav_notice_inside .friend_login .error {
+    background: url(/resources/web/images/exist.gif) no-repeat 1px 6px;
+    padding-left: 19px;
+    line-height: 26px;
+}
+
+.friend_info {
+    height: 60px;
+}
+
+.friend_info .friend_text {
+    float: left;
+    margin-left: 8px;
+    line-height: 22px;
+    width: 260px;
+}
+
+.message_light {
+    height: 6px;
+    width: 5px;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 45px;
+    z-index: 1001;
+    border: none;
+    display: block;
+}
+
+.message_light:hover {
+    border: none;
+    margin-top: -20px;
+}
+
+/*=================================网页主体样式================================*/
+#container {
+    width: 990px;
+    margin: 40px auto;
+    height: auto;
+    overflow: auto;
+}
+
+/*=================================首页样式================================*/
+.index_bg {
+    background: #000 url(/resources/web/images/homepage_bg.jpg) no-repeat center top;
+}
+
+#index_left {
+    float: left;
+    width: 620px;
+    margin-left: 20px;
+}
+
+#index_left p {
+    font-family: 楷体_GB2312, 楷体, STKaiti, BiauKai, kaitiRegular, sans-serif;
+    margin: 15px 0 0;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    letter-spacing: -1px;
+    text-indent: 2em;
+}
+
+/*=================================图片列表样式================================*/
+#pic_list {
+    padding: 0;
+    margin: 0 0 0 10px;
+    list-style: none;
+    float: right;
+    font-size: 12px;
+}
+
+#pic_list li {
+    background-color: #eee;
+    padding: 5px;
+    width: 150px;
+    margin-bottom: 10px
+}
+
+#pic_list image {
+    border: none
+}
+
+/*=================================左侧样式================================*/
+#General_left {
+    float: left;
+    width: 740px;
+}
+
+#content_box {
+    float: left;
+    width: 660px;
+    margin-left: 50px;
+    _margin-left: 40px;
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+    padding-top: 10px;
+}
+
+#content_box .video_box {
+    width: 640px;
+    height: 360px;
+    border-radius: 9px;
+    background: #666
+
+}
+
+#content_box p, .buddhism_index_content p {
+    text-justify: auto;
+    text-align: Justify;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #666;
+    text-indent: 30px;
+    font-family: "宋体", serif
+}
+
+.article_box {
+    margin-top: 30px;
+}
+
+#next_prev {
+    font-size: 12px;
+    width: 430px;
+    height: 50px;
+    line-height: 18px;
+    clear: both;
+    padding: 40px 0 20px;
+
+    margin: auto;
+}
+
+#next_prev a {
+    display: block;
+}
+
+#next_prev span {
+    color: #666;
+}
+
+#next_prev dt {
+    float: left;
+    text-align: center;
+    width: 24px;
+    padding: 0
+}
+
+.prev {
+    text-align: right;
+    width: 170px;
+    float: left;
+    margin-right: 10px;
+    padding-right: 20px;
+    background: url(/resources/web/images/prev.png) no-repeat right;
+}
+
+.next {
+    text-align: left;
+    float: left;
+    width: 170px;
+    margin-left: 10px;
+    padding-left: 20px;
+    background: url(/resources/web/images/next.png) no-repeat left;
+}
+
+/*=================================右侧样式================================*/
+#General_right {
+    float: right;
+    width: 160px;
+    padding-left: 60px;
+    padding-top: 55px;
+    _padding-top: 65px;
+    margin-left: 30px;
+    background: url(/resources/web/images/yidumen.png) no-repeat -190px -15px;
+    color: #666;
+    font-size: 14px;
+    min-height: 400px;
+    _height: 400px;
+}
+
+#General_right select {
+    margin: 10px 0 20px;
+    width: 160px;
+    border: 1px solid #ccc;
+}
+
+.r_reading, .r_download, .r_share, .r_contact {
+    margin-bottom: 20px;
+    height: auto;
+    overflow: hidden;
+}
+
+.r_reading dt, .r_download dt, .r_share dt, .r_contact dt, .r_reading dd, .r_download dd, .r_share dd, .r_contact dd {
+    padding-left: 25px;
+    _padding-left: 25px;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.r_reading dt {
+    background: url(/resources/web/images/yidumen.png) no-repeat 0 -124px;
+}
+
+.r_download dt {
+    background: url(/resources/web/images/yidumen.png) no-repeat 0 -50px;
+}
+
+.r_share dt {
+    background: url(/resources/web/images/yidumen.png) no-repeat 0 -100px;
+}
+
+.r_contact dt {
+    background: url(/resources/web/images/yidumen.png) no-repeat 0 -140px;
+}
+
+.r_reading dt, .r_download dt, .r_share dt, .r_contact {
+    clear: both;
+}
+
+.r_reading dd, .r_download dd, .r_share dd, .r_contact {
+    font-size: 12px;
+    float: left;
+    _float: none;
+    _display: inline;
+    _line-height: 34px;
+}
+
+.audio_player {
+    width: 18px;
+    _WIDTH: 22PX;
+    height: 18px;
+    overflow: hidden;
+    margin: -3px 0 0 -20px;
+    _position: absolute;
+    _margin-left: -30px;
+    _margin-top: -2px;
+}
+
+.r_share dt {
+    _padding-bottom: 8px;
+}
+
+.r_share dd {
+    _line-height: normal;
+    _padding-left: 25px;
+}
+
+#r_sina_share {
+    padding-left: 5px;
+    _padding-left: 3px;
+}
+
+#jplayer {
+    margin-top: -7px;
+    margin-left: -15px;
+    _position: absolute;
+    _margin-top: -6px;
+    _margin-left: -20px;
+}
+
+#jplayer a {
+    text-decoration: none
+}
+
+.r_textarea_outer {
+    background-color: #ABADB3;
+    padding: 1px;
+}
+
+.r_textarea_inside {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.r_contact textarea {
+    border: none;
+    background-color: #f7f7f7;
+    width: 96%;
+    overflow: hidden;
+    color: #ccc;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.r_contact input {
+    background: url(/resources/web/images/yidumen.png) no-repeat -130px -29px;
+    width: 52px;
+    line-height: 20px;
+    border: none;
+    color: #666;
+    margin-top: 5px;
+    float: right;
+}
+
+/*=================================佛法首页样式================================*/
+#buddhism_index_left {
+    width: 555px;
+    float: left;
+    margin-left: 45px;
+    _margin-left: 37px;
+    height: auto;
+    overflow: auto;
+}
+
+.buddhism_index_title {
+    line-height: 30px;
+    float: left;
+}
+
+.buddhism_index_content {
+    width: 555px;
+    margin: 0 auto 20px;
+    *margin-top: 15px;
+    font-size: 14px;
+}
+
+#buddhism_index_right {
+    width: 330px;
+    float: left;
+    margin-left: 30px;
+}
+
+#buddhism_index_right select {
+    width: 250px;
+}
+
+#buddhism_index_right dl {
+    clear: both;
+    margin-bottom: 20px;
+}
+
+#buddhism_index_right dl dt {
+    float: left;
+    width: 26px;
+    line-height: 30px;
+    border-right: 2px solid #3366ff;
+    padding-right: 5px;
+    font-size: 22px;
+    font-family: 楷体_GB2312, 楷体, STKaiti, BiauKai, kaitiRegular, sans-serif;
+    margin-right: 12px;
+}
+
+#buddhism_index_right dl dd {
+    float: left;
+    width: 285px;
+    padding: 0 0 30px;
+}
+
+#buddhism_index_right dl dd a {
+    text-justify: auto;
+    text-align: Justify;
+    display: block;
+    color: #666;
+    text-indent: 28px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 1px;
+}
+
+#buddhism_index_right dl dd a img {
+    display: inline-block;
+    float: right;
+    line-height: 24px;
+}
+
+#buddhism_index_right dl dd span {
+    display: block;
+    clear: both;
+    float: right;
+    margin-top: 8px;
+}
+
+#buddhism_index_right dl dd span a {
+    font-size: 12px;
+    display: inline;
+    vertical-align: middle;
+    color: #3366ff;
+}
+
+#buddhism_index_right dl dd span a:visited {
+    color: #0645ad
+}
+
+#video_box_small {
+    width: 555px;
+    height: 312px;
+    background-color: #666;
+}
+
+/*=================================修证佛法样式================================*/
+#buddhism_003_list_video {
+    width: 890px;
+    height: 500px;
+    background: #666;
+    margin: auto auto 20px;
+}
+
+#buddhism_003_main {
+    float: left;
+    width: 890px;
+    margin-left: 70px;
+    _margin-left: 50px;
+}
+
+#buddhism_003_main dl {
+    width: 100%;
+}
+
+#buddhism_003_main dl dt {
+    width: 150px;
+}
+
+#buddhism_003_list_left {
+    float: left;
+    width: 400px;
+}
+
+#buddhism_003_list_left dl {
+    font-size: 14px;
+    color: #666;
+    line-height: 34px;
+    _padding-top: 10px;
+}
+
+#buddhism_003_list_center {
+    float: left;
+    width: 230px;
+
+}
+
+#buddhism_003_list_right {
+    float: left;
+    width: 240px;
+    margin-left: 20px;
+}
+
+#buddhism_003_list_center dl {
+    _margin-top: 10px;
+}
+
+.buddhism_003_list_download {
+    font-size: 14px;
+    color: #666;
+    word-spacing: 20px;
+}
+
+.buddhism_003_list_download dt, .buddhism_003_list_download dd {
+    padding-left: 25px;
+    line-height: 30px;
+}
+
+.buddhism_003_list_download dt {
+    background: url(/resources/web/images/yidumen.png) no-repeat 0 -50px;
+    line-height: normal;
+}
+
+.buddhism_003_list_download span {
+    font-size: 12px;
+}
+
+/*=================================佛法list================================*/
+#list_box {
+    width: 670px;
+    margin-left: 40px;
+    _margin-left: 35px;
+    float: left;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+#list_box p {
+    line-height: 24px;
+    text-indent: 28px;
+    letter-spacing: 1px;
+    width: 640px;
+}
+
+#normal_list, #special_list, #heart_of_dharma_realm_list1, #heart_of_dharma_realm_list2 {
+    clear: both;
+    padding: 0;
+
+    margin: 0 0 0 24px;
+}
+
+#normal_list li, #special_list li, #heart_of_dharma_realm_list1 li, #heart_of_dharma_realm_list2 li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+    width: 320px;
+    float: left;
+    word-spacing: 5px;
+
+}
+
+#normal_list li a {
+    font-size: 14px;
+}
+
+#normal_list li span, #special_list li span, #heart_of_dharma_realm_list1 li span, #heart_of_dharma_realm_list2 li span, h6 span {
+    font-size: 12px;
+    color: #ACAEB4;
+}
+
+#special_list, #heart_of_dharma_realm_list1 {
+    width: 640px;
+}
+
+#special_list li {
+    width: 160px;
+}
+
+#heart_of_dharma_realm_list1 li {
+    width: 210px;
+}
+
+#heart_of_dharma_realm_list2 {
+    width: 560px;
+}
+
+#heart_of_dharma_realm_list2 li {
+    width: 140px;
+}
+
+/*=================================970*545视频盒子样式================================*/
+#video_box_large {
+    width: 970px;
+    height: 545px;
+    background-color: #666;
+    margin: 0;
+}
+
+.video_large_title {
+    font-weight: normal;
+    color: #666;
+    width: 970px;
+    margin: 8px auto;
+    line-height: 30px;
+    font-size: 14px;
+    clear: both;
+}
+
+/*=================================妙法莲华首页/视频页样式================================*/
+#lotus_intro, #lotus_list_area, #video_list_area {
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #666;
+}
+
+#lotus_intro dt {
+    margin: 30px 0 10px 0;
+}
+
+#lotus_intro dd {
+    line-height: 30px;
+}
+
+#lotus_list_area dd ul, #video_list_area dd ul {
+    margin-top: 20px;
+    width: 680px;
+}
+
+#lotus_list_area dd ul li, #video_list_area dd ul li {
+    list-style: none;
+    width: 340px;
+    float: left;
+    word-spacing: 8px;
+    line-height: 30px;
+}
+
+#lotus_list_area dd ul li span {
+    background: url(/resources/web/images/yidumen.png) no-repeat 0 -172px;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 3px 6px;
+}
+
+#lotus_list_area dd ul li span a {
+    color: #666;
+}
+
+#video_list_area dt {
+    padding-left: 25px;
+    background: url(/resources/web/images/yidumen.png) no-repeat -190px 0;
+}
+
+#video_list_area dd ul {
+    margin-left: 25px;
+}
+
+.r_lotus_download dt {
+    background: url(/resources/web/images/yidumen.png) no-repeat 0 -50px;
+    padding-left: 25px;
+}
+
+.r_lotus_download dd dl {
+    padding-left: 25px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+.r_lotus_download dd dt {
+    background-image: none;
+    padding-left: 0;
+}
+
+.r_lotus_download dd dl dd {
+    word-spacing: 35px;
+}
+
+.r_lotus_download dd dl dd span {
+    font-size: 12px;
+}
+
+/*=================================结缘页样式================================*/
+#goods_heart, #goods_star, #goods_music {
+    background: #fbfafa no-repeat right bottom;
+    width: 980px;
+    margin: 0 auto 40px;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+
+#goods_heart {
+    background-image: url(/resources/web/images/practisingbg1.png)
+}
+
+#goods_star {
+    background-image: url(/resources/web/images/practisingbg3.png)
+}
+
+#goods_music {
+    background-image: url(/resources/web/images/practisingbg2.png)
+}
+
+.goods_img_area {
+    width: 280px;
+
+    float: left;
+    margin-top: 40px;
+}
+
+.goods_index_intro {
+    float: left;
+    width: 670px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+}
+
+.goods_index_intro h6, .goods_index_intro p {
+    color: #000;
+    font-weight: normal;
+    font-family: 楷体_GB2312, 楷体, STKaiti, BiauKai, kaitiRegular, sans-serif;
+    letter-spacing: -2px;
+    line-height: 30px;
+    margin: 0;
+}
+
+.goods_index_intro h6 {
+    font-size: 22px;
+}
+
+.goods_index_intro p {
+    margin-top: 10px;
+    font-size: 19px;
+}
+
+.goods_index_intro p span {
+    background: url(/resources/web/images/yidumen.png) 0 -195px;
+    padding: 8px 20px;
+}
+
+.goods_index_post {
+    margin-top: 20px;
+    width: 550px;
+    word-spacing: 8px;
+    line-height: 12px;
+
+}
+
+.goods_index_post div {
+    line-height: 20px;
+    margin-bottom: 8px;
+}
+
+.goods_input_name, .goods_input_phone, .goods_input_address {
+    border: 1px solid #dadada;
+}
+
+.goods_input_name, .goods_input_phone {
+    width: 150px;
+}
+
+.goods_input_address {
+    width: 387px;
+}
+
+.goods_button {
+    float: right;
+    height: 57px;
+    width: 57px;
+    background: url(/resources/web/images/yidumen.png) 0 -241px;
+    border: none;
+}
+
+.zhu {
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.zhu span {
+    float: left;
+}
+
+.zhu ul {
+    list-style: none;
+    float: left;
+    margin: 0 0 0 5px;
+    word-spacing: 0;
+}
+
+.goods_star_list {
+    margin: 12px 0;
+}
+
+.goods_star_list ul {
+    margin-top: 12px;
+    width: 600px;
+}
+
+.goods_star_list ul li {
+    list-style: none;
+    float: left;
+    width: 200px;
+    line-height: 30px;
+}
+
+.goods_star_list span {
+    font-size: 12px;
+    line-height: 30px;
+    display: block;
+    clear: both
+}
+
+#goods_music dl {
+    width: 680px;
+    clear: both;
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 3px;
+}
+
+#goods_music dt, #goods_music dd {
+    float: left;
+    width: 170px;
+    line-height: 30px;
+}
+
+#goods_music dd {
+    font-size: 12px;
+}
+
+/*=================================杨宁老师==================================*/
+#teacher {
+    float: left;
+    width: 490px;
+    padding-right: 60px;
+    padding-bottom: 40px;
+    margin-left: 40px;
+    *margin-left: 40px;
+    font-size: 18px;
+    line-height: 27px;
+    color: #333;
+    font-family: 楷体_GB2312, 楷体, STKaiti, BiauKai, kaitiRegular, sans-serif;
+}
+
+#teacher p {
+    text-indent: 28px;
+    margin: 0 0 15px;
+}
+
+#teacher_weibo_share {
+    float: left;
+    width: 355px;
+    height: 555px;
+}
+
+#yangning {
+    float: right;
+    height: 48px;
+    width: 120px;
+    background: url(/resources/web/images/about_yanging.png) no-repeat;
+}
+
+#yangning a {
+    display: block;
+    line-height: 48px;
+    text-decoration: none;
+    width: 120px;
+}
+
+.yangning_weixin {
+    line-height: 30px;
+    color: #666;
+    margin: 5px;
+    width: 380px;
+}
+
+.yangning_weixin img {
+    float: left;
+    margin-right: 15px;
+}
+
+.yangning_weixinbox {
+    background: #fff;
+    border: #ccc solid 5px;
+    border-radius: 7px;
+    clear: both;
+    position: absolute;
+    margin-left: 340px;
+    font-family: 宋体, serif;
+    font-size: 14px;
+    margin-top: -100px;
+    z-index: 1010;
+    display: none;
+}
+
+/*=================================认证页样式================================*/
+#notification_box {
+    width: 680px;
+    margin: 40px auto;
+    height: auto;
+    overflow: auto;
+
+}
+
+#notification_feedback {
+    width: 990px;
+    margin: auto;
+}
+
+.notification_feedback_leftbox, .notification_feedback_rightbox {
+    float: left;
+    margin-left: 20px;
+    _margin-left: 10px;
+}
+
+.notification_feedback_leftbox {
+    width: 550px;
+}
+
+.notification_feedback_rightbox {
+    width: 400px;
+    _margin-left: 20px;
+}
+
+.notification_feedback_recordbox, .notification_feedback_emailbox {
+    float: left;
+    color: #666;
+    font-size: 14px;
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+.notification_feedback_emailbox {
+    width: 300px;
+    line-height: 24px;
+}
+
+.notification_feedback_emailbox input {
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.notification_feedback_emailbox a {
+    font-size: 12px;
+}
+
+.notification_feedback_emailbox form {
+    *margin: 0;
+}
+
+.notification_feedback_contentbox {
+    padding: 8px;
+    background-color: #f3f3f3;
+    width: 450px;
+    margin: 10px 0;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.notification_right_box {
+    width: 580px;
+    float: left;
+    margin-left: 50px;
+    font-family: arial black, sans-serif;
+    overflow: hidden;
+    color: #666;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.notification_large_blue {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 50px;
+    padding: 2px 5px;
+    color: #6699ff;
+    background-color: #f7f7f7;
+}
+
+#totalSecond_box {
+    display: inline;
+    background-color: #f7f7f7;
+    font-size: 12px;
+    line-height: 20px;
+    padding: 4px 12px;
+    color: #3366ff;
+    font-family: Arial, serif;
+
+}
+
+.notification_phone, .notification_email, .notification_error, .notification_goods, .notification_feedback_left, .notification_feedback_right {
+    float: left;
+    background: url(/resources/web/images/yidumen.png) no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.notification_feedback_left {
+    background-position: -125px -300px;
+}
+
+.notification_feedback_right {
+    background-position: -60px -300px;
+}
+
+.notification_phone {
+    background-position: -7px -300px;
+}
+
+.notification_email {
+    background-position: -62px -350px;
+}
+
+.notification_error {
+    background-position: -126px -350px;
+}
+
+.notification_goods {
+    background-position: -8px -350px;
+}
+
+.notification_error_input {
+    width: 200px;
+    height: 20px;
+    margin-top: 20px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+}
+
+/*=================================视频首页=================================*/
+
+.video_index_left {
+    width: 730px;
+    float: left;
+    height: auto;
+    overflow: hidden;
+}
+
+.video_index_left h5, .video_index_right h5 {
+
+    margin-bottom: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #666;
+    font-size: 14px;
+}
+
+.video_index_right a {
+    *float: left;
+}
+
+.video_index_right a .yangning_sns_weixin {
+    background: url(/resources/web/images/weixin.PNG);
+}
+
+.video_index_right a .yangning_sns_weibo {
+    background: url(/resources/web/images/weibo.png);
+    margin-left: 10px;
+}
+
+.video_index_right a .yangning_sns_weibo, .video_index_right a .yangning_sns_weixin {
+    width: 75px;
+    padding-left: 45px;
+    background-repeat: no-repeat;
+    margin-top: 3.5em;
+    font-size: 14px;
+    line-height: 20px;
+    *line-height: 19px;
+    height: 39px;
+    *height: 38px;
+    float: left;
+    *float: none;
+}
+
+.video_index_right a:hover .yangning_sns_weibo, .video_index_right a:hover .yangning_sns_weixin {
+    background-position: 0 -39px;
+}
+
+.video_index_right .yangning_sns a {
+    width: 125px;
+    float: left;
+    display: block;
+    height: auto;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.video_index_right .yangning_sns .weibo, .video_index_right .yangning_sns .weixin {
+    width: 39px;
+    height: 39px;
+    float: left
+}
+
+.video_index_right ul .current, .video_index_left ul .current {
+    padding: 0 6px;
+    background-color: #f4f4f4;
+    color: #666;
+    font-weight: bold;
+}
+
+.video_index_right ul .current span, .video_index_left ul .current span {
+    float: right;
+    *margin-top: -24px;
+    font-size: 12px;
+    color: #666;
+
+}
+
+.video_index_right ul li, .video_index_left ul li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.video_index_right ul li a span, .video_index_left ul li a span {
+    float: right;
+    *margin-top: -24px;
+    font-size: 12px;
+    color: #666;
+    *margin-right: 7px;
+}
+
+.video_index_right ul li a, .video_index_left ul li a {
+    line-height: 26px;
+    display: block;
+    color: #3366ff;
+    padding: 0 6px;
+}
+
+.chatroom_index_list_text {
+    float: left;
+    max-width: 18em;
+}
+
+.chatroom_index_list_text:hover {
+    max-width: 19em;
+}
+
+.video_index_right ul li a:visited, .video_index_left ul li a:visited {
+    color: #0645ad
+}
+
+.video_index_right ul li a:hover, .video_index_left ul li:hover {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+
+.video_index_right .curr {
+    background-color: #fe7f7f;
+    color: #fff;
+    line-height: 26px;
+    font-weight: bold;
+    padding: 3px 6px;
+}
+
+.video_index_right ul li a:hover span, .video_index_left ul li a:hover span {
+    font-weight: normal;
+}
+
+.latest_video ul {
+    margin-left: 30px;
+    margin-bottom: 10px;
+    width: 700px;
+    line-height: 26px;
+}
+
+.latest_video ul li {
+    float: left;
+    width: 332px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.latest_video ul .current {
+    width: 320px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.video_list {
+    width: 700px;
+    margin-left: 1.5em;
+}
+
+.video_list ul li a span {
+    color: #666;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.video_list ul {
+    padding: 0;
+    font-size: 14px;
+    margin: -10px 0 0 10px;
+    *margin-top: 0;
+}
+
+.video_list h5 {
+    margin-top: 30px;
+}
+
+.video_list ul li {
+    float: left;
+    width: 320px;
+    margin-right: 20px;
+}
+
+.video_index_right {
+    width: 250px;
+    float: left;
+    margin-left: 10px;
+}
+
+.video_index_right .video_sugg {
+    margin-top: 15px;
+    margin-bottom: 27px;
+}
+
+.video_index_right .video_sugg ul {
+    font-size: 14px;
+    *margin-top: -10px;
+    margin-left: 1.2em;
+}
+
+.video_index_right .video_sugg ul li {
+    *float: none;
+    *clear: both;
+}
+
+.video_index_right .video_sugg ul li a {
+    padding: 0 6px;
+    *padding: 5px;
+}
+
+.video_date_list {
+
+    margin-bottom: 40px;
+
+}
+
+.video_date_list h6 {
+    font-size: 14px;
+    margin: 20px 0 0 1.7em;
+    color: #3366ff;
+    clear: both;
+}
+
+.video_date_list ul li {
+    float: left;
+    min-width: 58px;
+    text-align: center;
+}
+
+.video_date_list ul li a:hover {
+    text-align: center;
+    padding: 0;
+}
+
+.video_date_list ul {
+    margin: 5px 0 0 10px;
+    padding: 0 0 20px;
+}
+
+/*=================================聊天室2013.7============================*/
+#overlay {
+    width: 100%;
+    background: #fff;
+    filter: alpha(opacity=10);
+    opacity: .1;
+    display: none;
+    position: absolute;
+    z-index: 999;
+}
+
+.chatroom_login {
+    display: none;
+    color: #fff
+}
+
+.chatroom_login, .chatroom_login_bg {
+    height: 310px;
+    width: 350px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.chatroom_login_bg {
+    z-index: 1001;
+    background: #000;
+    filter: alpha(opacity=20);
+    opacity: .2;
+}
+
+.chatroom_login_box {
+    width: 340px;
+    height: 300px;
+    margin: 5px;
+    background: #fff;
+    position: absolute;
+    z-index: 1002;
+}
+
+.chatroom_login_box h5 {
+    font-size: 14px;
+    margin: 25px 0 20px 30px;
+}
+
+.chatroom_login_input {
+    font-size: 14px;
+    width: 190px;
+    margin: auto;
+    letter-spacing: .1em;
+}
+
+.chatroom_login_input div {
+    background: url(/resources/web/images/yidumen.png) 0 -445px no-repeat;
+    line-height: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.chatroom_login_input input {
+    width: 120px;
+    border: none;
+    margin-left: 5px;
+    background: #f5f5f5;
+    color: #c8c8c8;
+    font-size: 12px;
+    _margin-top: 5px;
+}
+
+.chatroom_login_submit {
+    background: url(/resources/web/images/yidumen.png) no-repeat -120px -400px;
+    height: 20px;
+    width: 55px;
+    border: none;
+    margin: 20px 0 0 210px;
+}
+
+.chatroom_login_regist {
+    font-size: 14px;
+    margin-left: 30px;
+    margin-top: 65px;
+}
+
+#chatroom_left {
+    width: 720px;
+    float: left;
+}
+
+.chatroom_video {
+    margin-bottom: 30px;
+}
+
+.chatroom_index_video_area {
+    height: 425px;
+    margin-top: 8px;
+    width: 100%;
+}
+
+.video_index_video_line {
+    width: 990px;
+    height: 405px;
+    background: #f4f4f4;
+    clear: both;
+    border-radius: 9px;
+}
+
+.yangning {
+    position: relative;
+    *padding-top: 10px;
+    float: left;
+    margin-left: 30px;
+    right: 0;
+    width: 240px;
+    *overflow: hidden;
+}
+
+.yangning img {
+    float: right;
+    margin-top: -46px;
+    *display: none;
+    margin-left: 25px;
+}
+
+.yangning p {
+    font-size: 14px;
+    line-height: 1.6em;
+    color: #666;
+    margin-right: 18px;
+    text-indent: 2em;
+    font-family: "宋体", sans-serif;
+}
+
+.chatroom_video_box {
+    width: 720px;
+    height: 405px;
+    background-color: #666;
+    float: left;
+}
+
+.chatroom_video h5 {
+    color: #666;
+}
+
+.chatroom_video h4, .chatroom_video h5 {
+    margin-left: 15px;
+}
+
+.chatroom_video h4 {
+    font-weight: bold;
+    font-size: 16px;
+    color: #666;
+}
+
+.chatroom_video h4 span {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.chatroom_label {
+    margin-top: 0;
+    margin-left: 14px;
+    *margin-left: 18px;
+    line-height: 26px;
+    font-size: 14px;
+    color: #666;
+}
+
+.chatroom_label span {
+    display: block;
+    float: left;
+    min-width: 48px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.chatroom_label span a {
+    display: block;
+    color: #3366ff;
+    padding: 0 8px;
+}
+
+.chatroom_label span a:hover {
+    background-color: #f4f4f4;
+    font-size: 14px;
+    padding: 0 8px;
+    color: #3366ff;
+    font-weight: bold;
+}
+
+.chatroom_label span a:visited {
+    color: #0645ad
+}
+
+.chatroom_label .cur {
+
+    font-weight: bold;
+    color: #fff;
+    background: #fe7f7f;
+}
+
+.chatroom_input_area {
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 700px;
+}
+
+.head_pic {
+    background: #f4f4f4;
+    height: 50px;
+    width: 50px;
+    float: left;
+    padding: 2px;
+    text-align: center;
+}
+
+.head_pic_inside {
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.head_pic img {
+    height: 50px;
+    width: 50px;
+}
+
+.chatroom_headpic_outside {
+    background-color: #f4f4f4;
+    width: 44px;
+    height: 44px;
+    padding: 2px;
+    float: left;
+}
+
+.chatroom_headpic_inside {
+    width: 44px;
+    height: 44px;
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.chatroom_input_box {
+    background: #f4f4f4;
+    padding: 2px;
+    float: left;
+    margin-left: 10px;
+}
+
+.chatroom_input_box {
+    width: 90%;
+}
+
+.chatroom_input_box textarea {
+    border: none;
+    width: 95%;
+    font-size: 14px;
+    color: #666;
+    margin: 10px;
+}
+
+.chatroom_input, .chatroom_input_reply {
+    background: #fff;
+}
+
+.chatroom_input_bottom {
+    line-height: 40px;
+    display: none;
+}
+
+.chatroom_input_bottom_username {
+    color: #3366ff;
+    font-size: 14px;
+    margin-left: 2px;
+    float: left
+}
+
+.chatroom_input_bottom_guest {
+    color: #666;
+    font-size: 14px;
+    margin-left: 2px;
+    float: left;
+}
+
+.chatroom_input_bottom_guest a {
+    color: #3366ff;
+}
+
+.chatroom_tb {
+    float: right;
+    font-size: 14px;
+    color: #666;
+    *margin-top: 4px;
+}
+
+.chatroom_tb img {
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.chatroom_tb span {
+    margin-left: 5px;
+}
+
+.chatroom_tb input {
+    height: 32px;
+    width: 82px;
+    border: none;
+    background: url(/resources/web/images/yidumen.png) -60px -240px;
+    vertical-align: middle;
+}
+
+.chatroom_guestbook_area {
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.chatroom_guestbook {
+    margin-top: 10px;
+}
+
+.chatroom_guest_article {
+    font-size: 14px;
+    line-height: 22px;
+    color: #666;
+    float: left;
+    width: 642px;
+    margin-left: 10px;
+}
+
+.chatroom_guest_article dt {
+    margin-bottom: 10px;
+}
+
+.chatroom_guest_article dd {
+    padding: 0;
+    margin: 10px 0 0;
+    height: auto;
+    overflow: hidden;
+}
+
+.chatroom_button_feedback, .chatroom_button_up {
+    width: 55px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    background: url(/resources/web/images/yidumen.png) no-repeat;
+    margin-right: 10px;
+    float: left;
+}
+
+.chatroom_button_feedback a, .chatroom_button_up a {
+    display: block;
+    text-decoration: none;
+    *width: 55px;
+    *height: 20px;
+    *line-height: 20px;
+}
+
+.chatroom_button_feedback {
+    background-position: -55px -400px;
+}
+
+.chatroom_button_feedback_active {
+    background-position: 0 -400px;
+}
+
+.chatroom_button_up {
+    background-position: -55px -420px;
+}
+
+.chatroom_reply {
+    margin-top: 20px;
+    display: none;
+}
+
+.chatroom_reply_list {
+    margin-top: 20px;
+}
+
+.chatroom_input_box_reply_list {
+    width: 578px;
+    float: left;
+    margin-left: 10px;
+}
+
+#chatroom_right {
+    width: 250px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 8px;
+    *margin-top: -8px;
+}
+
+#chatroom_right ul, #chatroom_right ul li {
+    margin: 0;
+    padding: 0;
+}
+
+#chatroom_right ul {
+    margin-bottom: 20px;
+    height: 330px;
+    *height: 320px;
+}
+
+#chatroom_right h5 {
+    color: #666;
+    margin: 0;
+}
+
+#chatroom_right li {
+    list-style: none;
+    font-size: 14px;
+    margin-left: 17px;
+    margin-bottom: 2px;
+}
+
+#chatroom_right .chatroom_right_current {
+    background-color: #f4f4f4;
+    font-size: 14px;
+    margin-left: 17px;
+    padding: 7px;
+    color: #666;
+    height: auto;
+    overflow: auto;
+}
+
+#chatroom_right li a {
+    *float: left;
+    display: block;
+    padding: 7px;
+    height: auto;
+    overflow: auto;
+}
+
+#chatroom_right li a:hover {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+#chatroom_right li a:hover span {
+    color: #666;
+}
+
+#chatroom_right li a span {
+    color: #ccc;
+    font-size: 12px;
+    float: right;
+}
+
+#chatroom_right .chatroom_right_current span {
+    float: right;
+    font-size: 12px;
+    color: #ccc;
+}
+
+#chatroom_right li a .chatroom_list_title, #chatroom_right li a:hover .chatroom_list_title {
+    float: left;
+    color: #3366ff;
+    font-size: 14px;
+}
+
+#chatroom_right .chatroom_right_current .chatroom_list_title {
+    float: left;
+    font-size: 14px;
+    color: #666;
+}
+
+#chatroom_right .chatroom_right_share {
+    margin-bottom: 25px;
+    *margin-bottom: 20px;
+    height: auto;
+    overflow: auto;
+}
+
+#chatroom_right .chatroom_right_share a {
+    float: left;
+    margin-left: 5px;
+    padding: 0;
+}
+
+#chatroom_right .chatroom_right_share a:visited {
+    color: #0645ad
+}
+
+#chatroom_right .chatroom_right_share a:hover {
+    background: none;
+}
+
+/*==================================用户中心================================*/
+.reg_attention {
+    margin-top: 1.5em;
+}
+
+#user_center_area {
+    width: 870px;
+    padding-left: 120px;
+    margin: 50px auto;
+    background: url(/resources/web/images/user_center.png) no-repeat 40px 0;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+#user_center_area .message_area {
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+#user_center_area .message_area dd a {
+    margin-left: 35px;
+}
+
+.user_head_pic, .user_head_pic_outside {
+    width: 46px;
+    height: 46px;
+    background: #f4f4f4;
+    overflow: hidden;
+}
+
+.user_head_pic_outside {
+    float: left;
+    padding: 3px;
+    margin-right: 10px;
+}
+
+.user_head_pic img {
+    width: 46px;
+    height: 46px;
+}
+
+.information_area, .SNS_area {
+    float: left;
+    line-height: 26px;
+    margin-top: 2px;
+}
+
+.information_area {
+    margin-right: 80px;
+}
+
+.information_area .latest_login {
+    margin-left: 10px;
+    float: left;
+}
+
+.information_area dd {
+    margin-left: 65px;
+}
+
+.information_area dt, .SNS_area dt {
+    margin-bottom: 7px;
+}
+
+.information_area dd, .SNS_area dd {
+    margin-top: 25px;
+}
+
+.information_area dd .yz {
+
+}
+
+.SNS_area dd {
+    margin-top: 7px;
+    margin-bottom: 25px;
+    word-spacing: 10px;
+}
+
+.SNS_area dd span {
+    margin-right: 20px;
+}
+
+.SNS_area span img {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.info_modify {
+    margin-top: 40px;
+    width: 400px;
+}
+
+.info_modify dt {
+    margin-bottom: 10px;
+}
+
+.info_modify dd {
+    margin-top: 5px;
+    clear: both;
+}
+
+.info_modify a {
+    display: block;
+    margin-top: 10px;
+    float: left;
+    width: 180px;
+}
+
+.cancel {
+    margin-top: 30px;
+}
+
+#user_reg {
+    width: 700px;
+    padding-left: 270px;
+    margin: 50px 0;
+    background: url(/resources/web/images/user_center.png) no-repeat 185px 0;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+#user_reg .username_no {
+    background: url(/resources/web/images/exist.gif) no-repeat;
+    padding-left: 20px;
+    margin-left: 10px;
+    letter-spacing: 0;
+}
+
+#user_reg .username_yes {
+    background: url(/resources/web/images/no_use.gif) no-repeat;
+    padding-left: 20px;
+    margin-left: 10px;
+    letter-spacing: 0;
+}
+
+#user_reg dl {
+    padding-top: 20px;
+    width: 680px;
+}
+
+#user_reg dl dt, #user_reg dl dd {
+    float: left;
+}
+
+#user_reg dl dt {
+    margin-top: 10px;
+}
+
+#user_reg dl dd input {
+    vertical-align: middle;
+    width: 200px;
+    height: 26px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    line-height: 26px;
+}
+
+#user_reg hr {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 40px 0;;
+}
+
+#user_reg p {
+    line-height: 21px;
+    margin-bottom: 20px;
+    width: 30em;
+}
+
+#user_reg p a {
+    font-size: 12px;
+}
+
+#user_approve_area {
+    width: 520px;
+    padding-left: 280px;
+    margin: 50px 0;
+    background: url(/resources/web/images/mail.gif) no-repeat 170px 0;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+#user_approve_area .user_appro {
+    letter-spacing: 0;
+}
+
+#user_approve_area .user_appro .email_large {
+    padding: 8px;
+    background: #f7f7f7;
+    line-height: 30px;
+    color: #6699ff;
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+
+#user_approve_area .user_appro .email_small {
+    padding: 8px;
+    background: #f7f7f7;
+    font-size: 12px;
+}
+
+.user_info_setup {
+    margin-top: 60px;
+    line-height: 26px;
+}
+
+.user_info_setup .nicname_input {
+    vertical-align: middle;
+    width: 200px;
+    height: 26px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    line-height: 30px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.user_info_setup .headpic_setup {
+    margin-top: 40px;
+}
+
+.user_info_setup .headpic_every_choice {
+    float: left;
+    margin-right: 3px;
+    text-align: center;
+}
+
+.user_info_setup .headpic_every_choice input {
+    margin-right: 15px;
+    clear: both;
+}
+
+.user_info_setup .user_head_pic_outside {
+    float: none;
+}
+
+.user_info_complete {
+    margin-top: 20px;
+}
+
+.user_info_complete .user_info_detail {
+    line-height: 35px;
+    word-spacing: 8px;
+}
+
+.user_info_complete .user_info_detail select {
+    line-height: 24px;
+    font-size: 16px;
+    color: #666;
+    border: 1px solid #abadb3;
+    background: #f5f5f5;
+}
+
+.own_num {
+    font-family: Arial black, serif;
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+/*推荐、置顶*/
+.video_update, .video_choice, .video_news {
+    margin-left: 5px;
+    display: inline;
+    margin-top: 5px;
+}
+
+.video_update {
+    background: #dcfe7f;
+    font-size: 11px;
+    line-height: 24px;
+    color: #000;
+    padding: 3px 3px 2px 3px;
+    border-radius: 5px;
+}
+
+.video_choice {
+    background: url(/resources/web/images/editors_choice.png) no-repeat 0 8px;
+    padding: 7px;
+}
+
+.video_news {
+    background: url(../images/editors_new.png) no-repeat 0 8px;
+    padding: 7px;
+}
+
+/*用户更改邮件/手机、个人信息*/
+#user_edit_email {
+    width: 680px;
+    padding-left: 170px;
+    margin: 50px 0;
+    background: url(/resources/web/images/house-gear.png) no-repeat 85px 0;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+#user_edit_email .user_appro {
+    letter-spacing: 1px;
+}
+
+#user_edit_email .user_appro .attention {
+    margin-left: 8em;
+}
+
+#user_edit_email .user_appro .email_large {
+    padding: 8px;
+    background: #f7f7f7;
+    line-height: 30px;
+    color: #6699ff;
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+
+#user_edit_email .mobile_large {
+    padding: 8px;
+    line-height: 30px;
+    color: #6699ff;
+    letter-spacing: 1px;
+    font-size: 26px;
+    background: #f7f7f7;
+}
+
+#user_edit_email .mobile_large .mobile_large_underline {
+    text-decoration: underline
+}
+
+#user_edit_email .user_appro .email_small {
+    padding: 8px;
+    background: #f7f7f7;
+    font-size: 12px;
+    color: #3366ff;
+}
+
+#user_edit_email .user_info_detail {
+    float: left;
+    margin-left: 10px;
+}
+
+/*更改密码*/
+#user_edit_password {
+    width: 680px;
+    padding-left: 280px;
+    margin: 50px 0;
+    background: url(/resources/web/images/house-recover.png) no-repeat 170px 0;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+#user_edit_password .mobile_large {
+    padding: 8px;
+    line-height: 30px;
+    color: #6699ff;
+    letter-spacing: 1px;
+    font-size: 26px;
+    background: #f7f7f7;
+}
+
+#user_edit_password .email_large {
+    padding: 8px;
+    line-height: 30px;
+    background: #f7f7f7;
+    color: #6699ff;
+    letter-spacing: 1px;
+    font-size: 26px;
+}
+
+#user_edit_password .user_appro .email_small {
+    padding: 8px;
+    background: #f7f7f7;
+    font-size: 12px;
+    color: #3366ff;
+}
+
+#user_edit_password .input_yzm {
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    line-height: 20px;
+    height: 24px;
+    color: #999;
+    font-size: 14px;
+    width: 180px;
+}
+
+/*======================================================用户系列页面表单、警告等==============================================================*/
+.user_area {
+    height: auto;
+    overflow: auto;
+}
+
+.text_title {
+    float: left;
+    line-height: 30px;
+}
+
+.user_input_area {
+    width: 600px;
+    float: left;
+    height: auto;
+    overflow: hidden;
+
+}
+
+.alert {
+    line-height: 1.3em;
+    margin-right: 1em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    text-align: justify;
+}
+
+.alert span {
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    font-size: 12px;
+    width: 1.3em;
+    height: 1.5em;
+    padding-left: .2em;
+    border-radius: 1em;
+    margin-top: -.1em;
+    margin-right: .5em;
+    float: left;
+    background: #c2410e;
+}
+
+.text_input {
+    width: 200px;
+    height: 26px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    margin-bottom: 8px;
+    line-height: 26px;
+}
+
+.user_submit {
+    width: 50px;
+    height: 25px;
+    display: block;
+    margin-top: 5px;
+    color: #fff;
+    background: url(/resources/web/images/yidumen.png) no-repeat -130px 0;
+    border: none;
+}
+
+.ok {
+    display: inline;
+    margin-left: .2em;
+    background: #88d120;
+    line-height: 2em;
+    border-radius: 2em;
+    padding: .1em .3em;
+}
+
+/*头像更换弹出层*/
+#user_pic_upload {
+    width: 656px;
+    height: 406px;
+    background: #efefef;
+    border: #efefef solid 7px;
+    display: none;
+    position: fixed;
+    z-index: 10005;
+    border-radius: 10px;
+}
+
+.user_pic_upload_inside {
+    width: 650px;
+    height: 400px;
+    background: #fff;
+    border: #f2f2f2 solid 3px;
+    border-radius: 10px;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    z-index: 10006;
+}
+
+.user_pic_upload_inside iframe {
+    width: 650px;
+    height: 400px;
+    overflow: hidden;
+    border: none;
+    border-radius: 10px;
+}
+
+/*=================================页脚样式================================*/
+#footer {
+    background-color: #f5f5f5;
+    border-top: 1px solid #e5e5e5;
+    height: 100px;
+}
+
+#footer dl {
+    width: 990px;
+    margin: auto;
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+}
+
+#footer dl dd {
+    width: 240px;
+    float: left;
+    margin-top: 20px;
+}
+
+.footer_input_text {
+    border: 1px solid #bfbfbf;
+    height: 20px;
+    font-size: 14px;
+    font-family: arial, serif;
+    line-height: 20px;
+    margin-top: 10px;
+}
+
+.footer_input_submit, .notification_error_submit {
+    width: 50px;
+    height: 24px;
+    line-height: 24px;
+    background: url(/resources/web/images/yidumen.png) no-repeat -130px 0;
+    border: none;
+    color: #fff;
+    margin-left: 5px;
+}
+
+#footer dl dt {
+    float: right;
+    margin-top: 20px;
+    text-align: right;
+}
+
+/*====================404.html=====================*/
+#Notification_404_main {
+    width: 750px;
+    margin: auto;
+    height: 350px;
+    background: url(/resources/web/images/404.jpg) no-repeat center;
+}
+
+#Notification_404_box {
+    margin-left: 440px;
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 24px;
+}
+
+#bandaccount_up {
+    width: 650px;
+    height: 400px;
+    background: #fff;
+    border: #ccc solid 3px;
+    display: none;
+    position: fixed;
+    z-index: 10005;
+}
+
+#bandaccount_up iframe {
+    width: 650px;
+    height: 400px;
+    overflow: hidden;
+    border: none;
+}
