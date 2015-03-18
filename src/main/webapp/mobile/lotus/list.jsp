@@ -31,8 +31,8 @@
             <h3>视频讲义</h3>
             <div id="content_box">
                 <ul id="fhj_list">
-                    <li><a href="javascript:playvideo(1001);" id="fhj01">《法华经》概述</a></li>
-                    <div class="fhj_video" id="fhj_video1001">
+                    <li><a href="javascript:playvideo('0001');" id="fhj00">《法华经》概述</a></li>
+                    <div class="fhj_video" id="fhj_video0001">
                         <div id="video_box">
                             <video controls="controls" width="100%" loop="loop">
                                 <source src="http://v3.yidumen.com/video/${videoFormat}/A0001_${videoFormat}.mp4" type="video/mp4">
