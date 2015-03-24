@@ -14,7 +14,7 @@
             <h3>小说《法界之心》结缘赠阅</h3>
             <div id="content_box">
                 <div id="goods_txt">
-                    <img src="http://yimg.yidumen.com/yidumen/mobile/images/book.png" style="float:left; margin-right:1em;" />
+                    <img src="/resources/mobile/images/book.png" style="float:left; margin-right:1em;"/>
                     一切众生皆具如来智慧德相，皆因分别执着不能证得。这是法身佛的智慧，这种智慧即：法界之心。
                     <div id="goods_link"><a href="/heart_of_dharma_realm/list">在线阅读</a> // <a href="/goods/getbook">书籍赠阅</a></div>
                 </div>
@@ -23,7 +23,7 @@
             <h3>科幻故事《星路》</h3>
             <div id="content_box">
                 <div id="goods_txt">
-                    <img src="http://yimg.yidumen.com/yidumen/mobile/images/novel.png" style="float:left; margin-right:1em;" />
+                    <img src="/resources/mobile/images/novel.png" style="float:left; margin-right:1em;"/>
                     在遥远的银河系中央，有一颗星球，这儿的生命都是光化身，他们神通很大，可以像佛教中的观世音菩萨一样，个个随心念所想，变出千手千眼。有一个国王统治着整个星球，他的名字叫多宝如意王，他有一个女儿，叫大悲。
                     <div id="goods_link"><a href="/awaken_journey/list">在线阅读</a></div>
                 </div>

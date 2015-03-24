@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0" />
 <title>易度门</title>
-<link href="/reources/css/wap.css" rel="stylesheet" type="text/css" />
+    <link href="/resources/css/wap.css" rel="stylesheet" type="text/css"/>
 <script language="javascript" type="text/javascript" src="/resources/mobile/js/jquery-1.7.2.js" ></script>
 <script language="javascript" type="text/javascript" src="/resources/mobile/js/jquery.corner.js" ></script>
 <script language="javascript" type="text/javascript" src="/resources/mobile/js/corner.js" ></script>
@@ -32,7 +32,7 @@
 </head>
 
 <body>
-<%@include file="/WEB-INF/jspf/mobile/footer.jspf"%>
+<%@include file="/WEB-INF/jspf/mobile/nav.jspf" %>
 <div id="main_container">
   <h3>关于杨宁老师</h3>
   <div id="content_box">
