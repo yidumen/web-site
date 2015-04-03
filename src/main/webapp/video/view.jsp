@@ -7,7 +7,7 @@
     <meta name="keywords" content="${video.title},杨宁视频,佛学视频,杨宁老师,易度门">
     <meta name="description" content="${video.title},杨宁老师佛学视频 在线观看 – 易度门">
     <%@include file="/WEB-INF/jspf/header.jspf" %>
-    <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
+    <link rel="stylesheet" href="/resources/video-js/video-js.min.css">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     <div id="video_box_large">
         <video id="video-player"
                class="video-js vjs-default-skin vjs-big-play-centered"
-               poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+               poster="/resources/web/images/bg_video.png"
                src="http://v3.yidumen.com/video/480/${video.file}_480.mp4"
                data-setup='{ "controls": true, "autoplay": true, "width":"100%", "height":"100%" }'>
             您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。

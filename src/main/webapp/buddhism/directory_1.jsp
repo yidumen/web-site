@@ -8,8 +8,8 @@
     <meta name="description" content="修证佛法、学习佛法、了解佛法 - 易度门"/>
     <meta charset="utf-8">
     <%@include file="/WEB-INF/jspf/header.jspf" %>
-    <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
-    <link rel="stylesheet" href="/resources/web/js/video-js/yidumen-player.css">
+    <link rel="stylesheet" href="/resources/video-js/video-js.min.css">
+    <link rel="stylesheet" href="/resources/video-js/yidumen-player.css">
 </head>
 <body>
 <!--web head width:990px -->
@@ -20,7 +20,7 @@
     <div id="buddhism_003_list_video">
         <video id="video-player"
                class="video-js vjs-default-skin vjs-big-play-centered"
-               poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+               poster="/resources/web/images/bg_video.png"
                src="http://v3.yidumen.com/video/480/B0001_480.mp4"
                data-setup='{ "controls": true, "autoplay": true, "preload": "auto", "width":"100%", "height":"100%" }'>
             您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。

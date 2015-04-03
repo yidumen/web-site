@@ -20,7 +20,7 @@
     <div id="video_box_large" style="width:960px; height:428px;">
         <video id="video-player"
                class="video-js vjs-default-skin vjs-big-play-centered"
-               poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+               poster="/resources/web/images/bg_video.png"
                 >您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。
         </video>
         <ul id="listbar" style="width: 200px; float: right"></ul>

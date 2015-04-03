@@ -8,8 +8,8 @@
     <meta name="description" content="修证佛法、学习佛法、了解佛法 - 易度门"/>
     <meta charset="utf-8">
     <%@include file="/WEB-INF/jspf/header.jspf" %>
-    <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
-    <link rel="stylesheet" href="/resources/web/js/video-js/yidumen-player.css">
+    <link rel="stylesheet" href="/resources/video-js/video-js.min.css">
+    <link rel="stylesheet" href="/resources/video-js/yidumen-player.css">
 </head>
 <body>
 <!--web head width:990px -->
@@ -20,7 +20,7 @@
     <div id="video_box_large" style="width:960px; height:428px;">
         <video id="video-player"
                class="video-js vjs-default-skin vjs-big-play-centered"
-               poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+               poster="/resources/web/images/bg_video.png"
                 >您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。
         </video>
         <ul id="listbar" style="width: 200px; float: right"></ul>
@@ -56,9 +56,9 @@
 <!-- -->
 <!--web footer width:100% -->
 <%@include file="/WEB-INF/jspf/footer.jspf" %>
-<script type="text/javascript" src="/resources/web/js/video-js/video.js"></script>
-<script type="text/javascript" src="/resources/web/js/video-js/lang/zh.js"></script>
-<script type="text/javascript" src="/resources/web/js/video-js/yidumen-player.js"></script>
+<script type="text/javascript" src="/resources/video-js/video.js"></script>
+<script type="text/javascript" src="/resources/video-js/lang/zh.js"></script>
+<script type="text/javascript" src="/resources/video-js/yidumen-player.js"></script>
 <script>
     videojs.options.flash.swf = "/resources/video-js/video-js.swf";
     var playlist = [

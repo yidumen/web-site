@@ -25,7 +25,7 @@
                     <div class="video_box" style="width:640px;height:360px;border-radius:9px;background:#666">
                         <video id="video-player"
                                class="video-js vjs-default-skin vjs-big-play-centered"
-                               poster="http://yimg.yidumen.com/yidumen/web/images/bg_video.png"
+                               poster="/resources/web/images/bg_video.png"
                                src="http://v3.yidumen.com/video/480/${buddhism.video.file}_480.mp4"
                                data-setup='{ "controls": true, "autoplay": true, "width":"100%", "height":"100%" }'>
                             您正在使用的浏览器无法播放本视频，请您升级浏览器后，继续访问网站。
