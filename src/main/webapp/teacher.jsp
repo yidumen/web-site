@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="keywords" content="杨宁,杨宁佛学,法界之心,杨宁微博,易度门">
     <meta name="description" content="关于杨宁老师，杨宁老师修证佛法之路 – 易度门">
-    <meta name="viewport" content="width=1020"/>
+    <meta name="viewport" content="width=1020">
     <%@include file="/WEB-INF/jspf/header.jspf" %>
     <title>关于杨宁老师 修证佛法 – 易度门</title>
     <link href="/resources/web/css/style.css" rel="stylesheet">

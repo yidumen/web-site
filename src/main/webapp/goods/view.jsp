@@ -65,6 +65,6 @@
         <!-- -->
         <!--web footer width:100% -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
-        <script type="text/cjs" data-cjssrc="/resources/web/js/loadmore.js"></script>
+        <script type="text/javascript" src="/resources/web/js/loadmore.js"></script>
     </body>
 </html>

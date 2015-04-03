@@ -204,8 +204,8 @@ public class SutraServiceImpl implements SutraService, Serializable {
 
     @Override
     public String generateHeartAudioSN(Sutra sutra) {
-        final long leftValue = sutra.getLeftValue();
-        return String.format("%02d", leftValue - 634);
+        final long rightValue = sutra.getRightValue();
+        return String.format("%02d", rightValue / 2 - 317);
     }
 
 }

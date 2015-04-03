@@ -77,9 +77,9 @@
 <!-- -->
 <!--web footer width:100% -->
 <%@include file="/WEB-INF/jspf/footer.jspf" %>
-<script type="text/cjs" data-cjssrc="/resources/js/loadmore.js"></script>
-<script type="text/cjs" data-cjssrc="/resources/video-js/video.js"></script>
-<script type="text/cjs" data-cjssrc="/resources/video-js/lang/zh.js"></script>
+<script type="text/javascript" src="/resources/js/loadmore.js"></script>
+<script type="text/javascript" src="/resources/video-js/video.js"></script>
+<script type="text/javascript" src="/resources/video-js/lang/zh.js"></script>
 <script>videojs.options.flash.swf = "/resources/video-js/video-js.swf";</script>
 </body>
 </html>

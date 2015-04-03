@@ -25,7 +25,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/", "http://yidumen.oss-internal.aliyuncs.com/").setCachePeriod(31556926);
+        registry.addResourceHandler("/resources/**").addResourceLocations("/resources/", "http://v3.yidumen.com/").setCachePeriod(31556926);
     }
 
     @Bean

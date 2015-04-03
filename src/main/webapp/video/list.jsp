@@ -50,9 +50,9 @@
         <!--web footer width:100% -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
         <script type="text/javascript" src="/resources/video-js/video.js"></script>
-        <script type="text/javascript" src="/resources/web/js/video-js/video.js"></script>
-        <script type="text/javascript" src="/resources/web/js/video-js/lang/zh.js"></script>
-        <script type="text/javascript" src="/resources/web/js/video-js/yidumen-player.js"></script>
+        <script type="text/javascript" src="/resources/video-js/video.js"></script>
+        <script type="text/javascript" src="/resources/video-js/lang/zh.js"></script>
+        <script type="text/javascript" src="/resources/video-js/yidumen-player.js"></script>
         <script>
             var playlist = [
             <c:forEach begin="0" end="3" items="${videos}" var="video">
