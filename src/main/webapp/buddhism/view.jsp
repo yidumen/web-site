@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <title>易度门-${title}</title>
     <%@include file="/WEB-INF/jspf/header.jspf" %>
-    <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
+    <link rel="stylesheet" href="/resources/video-js/video-js.min.css">
 </head>
 <body>
 <!--web head width:990px -->
