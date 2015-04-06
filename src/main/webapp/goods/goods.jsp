@@ -37,7 +37,7 @@
                     <ul>
                         <li>1、免费结缘品数量有限，本次共有一百本。</li>
                         <li>2、我们优先选用顺丰快递发送本书，您尚需要支付相关运费，运费采用到付形式。<br/>&nbsp;（广东省内13元，省外22元）</li>
-                        <li>3、如有任何疑问，欢迎致电13811885188（智宁）进行询问。</li>
+                        <li>3、如有任何疑问，欢迎致电13825619285（德龙）进行询问。</li>
                         <li>4、您也可以<a href="/heart_of_dharma_realm/list">在线阅读</a>，或者直接下载本书电子版本（<a
                                 href="http://v3.yidumen.com/doc/法界之心.pdf">PDF版本</a>
                             | <a href="http://v3.yidumen.com/doc/法界之心.rtf">RTF版本</a>）
@@ -115,7 +115,7 @@
 </div>
 <!-- web container width:990px-->
 <%@include file="/WEB-INF/jspf/footer.jspf" %>
-<script type="text/javascript" src="/resources/web/js/goods.js"></script>
+<script type="text/javascript" src="/resources/js/goods.js"></script>
 <script type="text/javascript" src="/resources/web/js/jquery.corner.js"></script>
 <script type="text/javascript" src="/resources/web/js/corner.js"></script>
 </body>
