@@ -7,8 +7,8 @@
         <meta name="keywords" content="杨宁,杨宁老师,佛学视频,杨宁佛学,佛学视频下载" />
         <meta name="description" content="杨宁老师佛学视频 在线观看 - 易度门" />
         <%@include file="/WEB-INF/jspf/header.jspf" %>
-        <link rel="stylesheet" href="/resources/web/js/video-js/video-js.min.css">
-        <link rel="stylesheet" href="/resources/web/js/video-js/yidumen-player.css">
+        <link rel="stylesheet" href="/resources/video-js/video-js.min.css">
+        <link rel="stylesheet" href="/resources/video-js/yidumen-player.css">
     </head>
 
     <body>
@@ -50,9 +50,9 @@
         <!--web footer width:100% -->
         <%@include file="/WEB-INF/jspf/footer.jspf" %>
         <script type="text/javascript" src="/resources/video-js/video.js"></script>
-        <script type="text/javascript" src="/resources/web/js/video-js/video.js"></script>
-        <script type="text/javascript" src="/resources/web/js/video-js/lang/zh.js"></script>
-        <script type="text/javascript" src="/resources/web/js/video-js/yidumen-player.js"></script>
+        <script type="text/javascript" src="/resources/video-js/video.js"></script>
+        <script type="text/javascript" src="/resources/video-js/lang/zh.js"></script>
+        <script type="text/javascript" src="/resources/video-js/yidumen-player.js"></script>
         <script>
             var playlist = [
             <c:forEach begin="0" end="3" items="${videos}" var="video">

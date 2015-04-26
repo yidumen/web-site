@@ -5,7 +5,9 @@
         <meta charset="utf-8">
         <meta name="keywords" content="易度门,杨宁,修证佛法,妙法莲华经,法华经,结缘">
         <meta name="viewport" content="width=1020">
-        <meta name="description" content="易度门，由杨宁老师建立的佛法修证网站，提供妙法莲华经，杨宁佛学视频等佛学资源，方便更多佛徒能从网站中修证佛法，学习佛法，了解佛法！">    
+        <meta name="description" content="易度门，由杨宁老师建立的佛法修证网站，提供妙法莲华经，杨宁佛学视频等佛学资源，方便更多佛徒能从网站中修证佛法，学习佛法，了解佛法！">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="renderer" content="webkit">
         <link rel="icon" type="image/x-icon" href="/resources/web/images/favicon.ico">
         <link rel="shortcut icon" type="image/x-icon" href="/resources/web/images/favicon.ico">
         <link href="/resources/css/style.css" rel="stylesheet" type="text/css">
