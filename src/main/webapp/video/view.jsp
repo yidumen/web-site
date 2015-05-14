@@ -56,6 +56,12 @@
                 <a href="javascript:document.location.href='http://v3.yidumen.com/video_dl/720/${video.file}_${video.title}_720.mp4';">MP4
                     格式</a></dd>
         </dl>
+        <h4>开示摘录</h4>
+        <ul class="list">
+            <c:forEach var="video" items="${extract}">
+                <li><a href="/video/${video.file}">${video.title}</a></li>
+            </c:forEach>
+        </ul>
         <%@include file="/WEB-INF/jspf/weibo.jspf" %>
         <%@include file="/WEB-INF/jspf/exchange.jspf" %>
     </div>

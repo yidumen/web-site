@@ -42,6 +42,12 @@
                 </dl>
             </div>
             <div id="General_right">
+                <h4>开示摘录</h4>
+                <ul class="list">
+                    <c:forEach var="video" items="${extract}">
+                        <li><a href="/video/${video.file}">${video.title}</a></li>
+                    </c:forEach>
+                </ul>
                 <%@include file="/WEB-INF/jspf/weibo.jspf" %>
                 <%@include file="/WEB-INF/jspf/exchange.jspf" %>
             </div>

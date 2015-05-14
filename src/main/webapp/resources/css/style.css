@@ -98,6 +98,15 @@ input {
     border-radius: 5px;
 }
 
+.list {
+    list-style-type: none;
+    margin: -5px;
+}
+
+.list > li {
+    margin: 5px;
+}
+
 /*=================================网页头部样式================================*/
 #header {
     width: 990px;

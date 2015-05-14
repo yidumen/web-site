@@ -1,6 +1,5 @@
 package com.yidumen.web.service.impl;
 
-import com.yidumen.web.service.VideoService;
 import com.yidumen.dao.TagDAO;
 import com.yidumen.dao.VideoDAO;
 import com.yidumen.dao.constant.TagType;
@@ -8,22 +7,18 @@ import com.yidumen.dao.constant.VideoStatus;
 import com.yidumen.dao.entity.Tag;
 import com.yidumen.dao.entity.Video;
 import com.yidumen.dao.model.VideoQueryModel;
+import com.yidumen.web.service.VideoService;
 import com.yidumen.web.view.model.VideoGroup;
 import com.yidumen.web.view.model.VideoShootDate;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import javax.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  *
@@ -234,5 +229,21 @@ public class VideoServiceImpl implements VideoService {
         tag.setType(TagType.COLUMN);
         List<Tag> tags = tagDao.find(tag, false);
         return tags.get(0).getVideos();
+    }
+
+    @Override
+    public List<Video> getExtract() {
+        final VideoQueryModel model = new VideoQueryModel();
+
+        final List<VideoStatus> status = new ArrayList<>();
+        status.add(VideoStatus.PUBLISH);
+        model.setStatus2(status);
+        final Set<Tag> tags = new HashSet<>();
+        Tag tag = tagDao.find("开示摘录");
+        tags.add(tag);
+        model.setTags(tags);
+        model.setOrderProperty("file");
+        model.setDesc(false);
+        return this.find(model);
     }
 }

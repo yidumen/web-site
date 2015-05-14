@@ -5,7 +5,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="/resources/web/images/favicon.ico">
 <link rel="apple-touch-startup-image" type="image/x-icon" href="/resources/mobile/images/apple-touch-icon.png">
 <link rel="apple-touch-icon-precomposed" href="/resources/mobile/images/apple-touch-icon.png">
-<link href="/resources/mobile/css/wap.css" rel="stylesheet" type="text/css" />
+<link href="/resources/css/wap.css" rel="stylesheet" type="text/css"/>
 
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js" ></script>
 <script type="text/javascript" src="/resources/web/js/jquery.corner.js" ></script>
