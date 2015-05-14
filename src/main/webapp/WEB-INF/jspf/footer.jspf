@@ -1,0 +1,16 @@
+<%@page contentType="text/html" pageEncoding="utf-8"%>
+<div id="footer">
+        <dl>
+            <dt>联系电话：0086 13825619285 （杨龙）</dt>
+            <dd>
+                <a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&amp;email=3bG0vLOltJ2ktLmosLiz876ysA" style="text-decoration:none;">联系我们</a>　|　<a href="/">返回首页</a><br /><br />
+                珠海玛雅文化传播有限公司 2012 版权所有<br />
+                粤ICP备 12002739号
+            </dd>
+        </dl>
+</div>
+<!--/web footer -->
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js" ></script>
+<script type="text/javascript" src="/resources/js/baseCookie.js"></script>
+<script type="text/javascript" src="/resources/js/input_submit.js"></script>
+<script type="text/javascript" src="/resources/js/yidumen_all.js"></script>

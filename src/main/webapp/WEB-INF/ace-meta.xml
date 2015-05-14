@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ace-web-app>
+    <url-rewrite>
+        <rule>
+            <condition field="host">yidumen.com</condition>
+            <path>/</path>
+            <rewrite flags="R=301">http://www.yidumen.com/video/list</rewrite>
+        </rule>
+    </url-rewrite>
+</ace-web-app>

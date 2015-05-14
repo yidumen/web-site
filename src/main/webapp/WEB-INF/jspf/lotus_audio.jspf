@@ -1,0 +1,14 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<dl class="r_reading">
+    <dt>朗读本课</dt>
+    <dd>
+        <!--播放按钮 -->
+        <div style="width:150px; font-size:10px; background:bottom url(/resources/web/images/audio_bg.png) repeat-x; height:30px; border-right:4px solid #c4c4c4">
+            <div style="width:118px; background:bottom url(/resources/web/images/audio_bg.png) repeat-x; overflow:hidden; height:30px; padding:-10px;">
+                <audio src="http://v3.yidumen.com/audio/Lotus_Sutra_${index}_Mandarin.mp3" controls></audio>
+            </div>
+        </div>
+        <!--播放按钮结束 -->
+    </dd>
+</dl>
+        

@@ -1,0 +1,37 @@
+/* 
+    Created on : 2014-11-22, 21:21:02
+    Author     : 蔡迪旻
+*/
+.resolution {
+    margin: 5px !important;
+}
+.resolution .vjs-control-text {
+    width: 30px;
+    height: 30px;
+    clip: auto;
+}
+.vjs-default-skin.vjs-paused .vjs-control-bar {
+    display: block;
+}
+.video-js, #listbar {
+    display: inline-block;
+    vertical-align: top;
+}
+#listbar {
+    padding-left: 0;
+    margin: 0 0px 0 -4px;
+    list-style: none;
+    background-color: #3c3c3e;
+    color: #b9b5ba;
+    font: normal 11px Arial, Helvetica, sans-serif;
+    overflow-y: scroll;
+}
+#listbar>li {
+    padding: 10px;
+    border-bottom: black solid 1px;
+    cursor: pointer;
+}
+#listbar>li.active {
+    color: rgb(236, 236, 244);
+    background-color: #2f2f31;
+}

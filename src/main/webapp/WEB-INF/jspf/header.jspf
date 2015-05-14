@@ -1,0 +1,9 @@
+<%@page contentType="text/html" pageEncoding="utf-8"%>
+<meta charset="utf-8">
+<meta name=“msapplication-TileImage” content=“/resources/web/images/msapplication-TileImage.png”>
+<meta name=“msapplication-TileColor” content=“#ffcf65”>
+<meta name="viewport" content="width=1020" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="/resources/web/images/favicon.ico" rel="icon" type="image/x-icon" />
+<link href="/resources/web/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="/resources/css/style.css" rel="stylesheet" type="text/css" />
