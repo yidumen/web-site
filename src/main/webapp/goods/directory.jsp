@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>星路 - 易度门</title>
+        <title>${title} - 易度门</title>
         <meta name="keywords" content="星路" />
         <meta name="description" content="星路" />
         <%@include file="/WEB-INF/jspf/header.jspf" %>

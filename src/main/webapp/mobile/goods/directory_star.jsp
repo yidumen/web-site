@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>${title}-易度门</title>
+        <title>星路-易度门</title>
         <%@include file="/WEB-INF/jspf/mobile/header.jspf" %>
     </head>
 
