@@ -3,9 +3,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="keywords" content="易度门,杨宁,修证佛法,妙法莲华经,法华经,结缘">
-        <meta name="viewport" content="width=1020">
-        <meta name="description" content="易度门，由杨宁老师建立的佛法修证网站，提供妙法莲华经，杨宁佛学视频等佛学资源，方便更多佛徒能从网站中修证佛法，学习佛法，了解佛法！">
+        <meta name="description" content="易度门，由杨宁老师建立的佛法修证网站，提供妙法莲华经、金刚经、杨宁佛学视频等佛学资源，方便更多佛徒能从网站中修证佛法，学习佛法，了解佛法！">
+        <meta name="viewport" content="width=1020, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="renderer" content="webkit">
         <link rel="icon" type="image/x-icon" href="/resources/web/images/favicon.ico">
@@ -19,10 +18,10 @@
         <div id="header">
             <a href="/"><img alt="logo" src="/resources/web/images/homepage_logo.jpg" id="logo"/></a>
             <ul id="navigator">
-                <li><a href="/lotus/list" >妙法莲华</a></li>
-                <li><a href="/diamond/list" >金刚经</a></li>
-                <li><a href="/buddhism/list" >佛法</a></li>
-                <li><a href="/video/list" >聊天室</a></li>
+                <li><a href="/lotus">妙法莲华</a></li>
+                <li><a href="/diamond">金刚经</a></li>
+                <li><a href="/buddhism">佛法</a></li>
+                <li><a href="/video">聊天室</a></li>
                 <li><a href="/goods" >结缘</a></li>
             </ul>
         </div>

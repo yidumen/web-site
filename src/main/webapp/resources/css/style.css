@@ -409,18 +409,23 @@ input {
     border: 1px solid #ccc;
 }
 
-.r_reading, .r_download, .r_share, .r_contact {
+.r_reading, .r_download, .r_share, .r_contact, .r_quotes_collection {
     margin-bottom: 20px;
     height: auto;
     overflow: hidden;
 }
 
-.r_reading dt, .r_download dt, .r_share dt, .r_contact dt, .r_reading dd, .r_download dd, .r_share dd, .r_contact dd {
+.r_reading dt, .r_download dt, .r_share dt, .r_contact dt, .r_reading dd, .r_download dd, .r_share dd, .r_contact dd, .r_quotes_collection dd {
     padding-left: 25px;
     _padding-left: 25px;
     font-size: 14px;
     color: #666;
     margin-top: 10px;
+}
+
+.r_quotes_collection dt {
+    padding-left: 25px;
+    background: url(/resources/web/images/yidumen.png) no-repeat 0 -480px;
 }
 
 .r_reading dt {
@@ -789,11 +794,18 @@ input {
 }
 
 #lotus_list_area dd ul li, #video_list_area dd ul li {
+    display: inline-block;
     list-style: none;
-    width: 340px;
-    float: left;
+    width: 49%;
     word-spacing: 8px;
     line-height: 30px;
+}
+
+.loadmore {
+    margin-top: 5px;
+    margin-left: 34px;
+    height: 20px;
+    color: #ffa800;
 }
 
 #lotus_list_area dd ul li span {
@@ -1197,6 +1209,13 @@ input {
     float: left;
     height: auto;
     overflow: hidden;
+}
+
+.video_sort {
+    background: #dcfe7f;
+    font-size: 10px;
+    color: #454545;
+    border-radius: 5px;
 }
 
 .video_index_left h5, .video_index_right h5 {

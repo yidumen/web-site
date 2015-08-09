@@ -1,11 +1,12 @@
 package com.yidumen.web.view.controller;
 
-import com.yidumen.dao.entity.Sutra;
-import com.yidumen.dao.entity.Video;
+import com.yidumen.web.entity.Sutra;
+import com.yidumen.web.entity.Video;
 import com.yidumen.web.service.SutraService;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +24,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 @RequestMapping("buddhism")
-public class BuddhismController {
+public final class BuddhismController {
 
     private final Logger log = LoggerFactory.getLogger(BuddhismController.class);
     @Autowired
     private SutraService sutraService;
 
-    @RequestMapping("list")
+    @RequestMapping
     public String list(Model model, Device device) {
         model.addAttribute("practice", sutraService.findPracticeBuddhims());
         model.addAttribute("study", sutraService.findStudyBuddhims());

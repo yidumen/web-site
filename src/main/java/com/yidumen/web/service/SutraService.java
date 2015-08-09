@@ -1,7 +1,7 @@
 package com.yidumen.web.service;
 
-import com.yidumen.dao.entity.Sutra;
-import com.yidumen.dao.entity.Video;
+import com.yidumen.web.entity.Sutra;
+import com.yidumen.web.entity.Video;
 import com.yidumen.web.view.model.SutraModel;
 import java.util.List;
 

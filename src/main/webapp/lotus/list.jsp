@@ -4,9 +4,8 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>妙法莲华经,妙法莲华经全文,法华经 - 易度门</title>
-    <meta name="keywords" content="妙法莲华经,妙法莲华经全文,妙法莲华经白话释义,妙法莲华经下载, 法华经,杨宁,易度门">
-    <meta name="description" content="妙法莲华经，妙法莲华经全文，妙法莲华经下载，杨宁带你漫游妙法莲华 – 易度门">
+    <title>妙法莲华经,法华经 - 易度门</title>
+    <meta name="description" content="妙法莲华经原文及白话释义，并提供杨宁老师的讲解视频，欢迎观看。">
     <%@include file="/WEB-INF/jspf/header.jspf" %>
     <link rel="stylesheet" href="/resources/video-js/video-js.min.css">
     <link rel="stylesheet" href="/resources/video-js/yidumen-player.css">
@@ -69,39 +68,9 @@
 <script type="text/javascript" src="/resources/video-js/video.js"></script>
 <script type="text/javascript" src="/resources/video-js/lang/zh.js"></script>
 <script type="text/javascript" src="/resources/video-js/yidumen-player.js"></script>
+<script src="/resources/js/normal.js"></script>
 <script>
-    videojs.options.flash.swf = "/resources/video-js/video-js.swf";
-    playlist = [{
-        file: "A0001",
-        title: "《法华经》概述"
-    }, {
-        file: "A1001",
-        title: "《法华经》讲义（一）"
-    }, {
-        file: "A1002",
-        title: "《法华经》讲义（二）"
-    }, {
-        file: "A1003",
-        title: "《法华经》讲义（三）"
-    }, {
-        file: "A1004",
-        title: "《法华经》讲义（四）"
-    }, {
-        file: "A1005",
-        title: "《法华经》讲义（五）"
-    }, {
-        file: "A1006",
-        title: "《法华经》讲义（六）"
-    }];
-    var vjs = videojs("video-player", {
-        "controls": true,
-        "autoplay": true,
-        "width": 784,
-        "height": "100%",
-        plugins: {
-            ydmPlayer: playlist
-        }
-    });
+    app.lotusList();
 </script>
 <script type="text/javascript" src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=914263201"
         charset="utf-8"></script>

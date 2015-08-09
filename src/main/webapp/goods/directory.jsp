@@ -20,7 +20,7 @@
                     <c:forEach var="buddhism" items="${buddhisms}">
                         <c:choose>
                             <c:when test="${buddhism.content != null}">
-                                <p><a href="/${path}/${buddhism.id}">${buddhism.partIdentifier} ${buddhism.title}</a></p>
+                                <p><a href="/novel/${path}/${buddhism.id}">${buddhism.partIdentifier} ${buddhism.title}</a></p>
                             </c:when>
                             <c:otherwise>
                                 <p>${buddhism.partIdentifier} ${buddhism.title}</p>

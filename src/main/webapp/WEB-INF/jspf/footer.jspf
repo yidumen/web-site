@@ -10,7 +10,4 @@
         </dl>
 </div>
 <!--/web footer -->
-<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js" ></script>
-<script type="text/javascript" src="/resources/js/baseCookie.js"></script>
-<script type="text/javascript" src="/resources/js/input_submit.js"></script>
-<script type="text/javascript" src="/resources/js/yidumen_all.js"></script>
+<script type="text/javascript" src="//apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>

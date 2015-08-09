@@ -1,14 +1,13 @@
 package com.yidumen.web.service;
 
-import com.yidumen.dao.constant.TagType;
-import com.yidumen.dao.entity.Tag;
-import com.yidumen.dao.entity.Video;
-import com.yidumen.dao.model.VideoQueryModel;
+import com.yidumen.web.constant.TagType;
+import com.yidumen.web.entity.Tag;
+import com.yidumen.web.entity.Video;
 import com.yidumen.web.view.model.VideoGroup;
 import com.yidumen.web.view.model.VideoShootDate;
 
 import java.util.List;
-import java.util.Set;
+import java.util.Map;
 
 /**
  *
@@ -18,12 +17,12 @@ public interface VideoService {
 
     Video find(String file);
 
-    /**
+    /*
      * 根据给定的视频查找拍摄日期相同的其它视频
      * @param video
      * @return 
      */
-    List<Video> find(Video video);
+    //List<Video> find(Video video);
 
     List<Tag> findTags(int limit);
 
@@ -37,15 +36,19 @@ public interface VideoService {
 
     List<VideoShootDate> getShootDateModels();
 
-    List<Video> getTopNewVideos(final int limit);
+    List<Video> findChatroomVideos(int index, int size);
 
-    List<Video> find(VideoQueryModel model);
+    List<Video> find(Map<String, Object[]> condition);
 
     Tag findTags(String tagname);
 
     List<Tag> findTags(TagType type);
 
-    Set<Video> findDiamond();
+    List<Video> findDiamond();
 
     List<Video> getExtract();
+
+    List<Video> findLotus();
+
+    List<Video> findWeibo();
 }

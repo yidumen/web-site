@@ -1,6 +1,7 @@
 package com.yidumen.web.view.model;
 
-import com.yidumen.dao.entity.Video;
+import com.yidumen.web.entity.Video;
+
 import java.util.Date;
 import java.util.List;
 

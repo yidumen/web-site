@@ -1,20 +1,21 @@
 package com.yidumen.web.service.impl;
 
+import com.yidumen.web.entity.Sutra;
+import com.yidumen.web.entity.Video;
+import com.yidumen.web.repository.SutraMarkRepository;
+import com.yidumen.web.repository.SutraRepository;
+import com.yidumen.web.repository.VideoRepository;
 import com.yidumen.web.service.SutraService;
-import com.yidumen.dao.SutraDAO;
-import com.yidumen.dao.SutraMarkDAO;
-import com.yidumen.dao.VideoDAO;
-import com.yidumen.dao.entity.Sutra;
-import com.yidumen.dao.entity.Video;
-import com.yidumen.dao.model.VideoQueryModel;
 import com.yidumen.web.view.model.SutraModel;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
-import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -25,11 +26,11 @@ import org.springframework.stereotype.Service;
 public class SutraServiceImpl implements SutraService, Serializable {
 
     @Autowired
-    private SutraDAO sutraDao;
+    private SutraRepository sutraDao;
     @Autowired
-    private SutraMarkDAO markDao;
+    private SutraMarkRepository markDao;
     @Autowired
-    private VideoDAO videoDAO;
+    private VideoRepository videoDAO;
 
     //暂使用这个属性来计算了解佛教里面相关视频的代码值
     private int c;
@@ -186,12 +187,10 @@ public class SutraServiceImpl implements SutraService, Serializable {
 
     @Override
     public List<Video> findLoutsVideos() {
-        final VideoQueryModel model = new VideoQueryModel();
-        model.setFile("A0001");
-        model.setFile2("A1006");
-        model.setOrderProperty("file");
-        model.setDesc(false);
-        return videoDAO.find(model);
+        final Map<String, Object[]> condition = new HashMap<>();
+        condition.put("file", new String[]{"A0001", "A1006"});
+        condition.put("order", new String[]{"file", "asc"});
+        return videoDAO.findBetween(condition);
     }
 
     private List<Sutra> getDiamondOriginal() {
