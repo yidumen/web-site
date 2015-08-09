@@ -3,14 +3,14 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=2.0" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <link rel="shortcut icon" type="image/x-icon" href="/resources/web/images/favicon.ico">
-<link rel="apple-touch-startup-image" type="image/x-icon" href="/oss/mobile/images/apple-touch-icon.png">
-<link rel="apple-touch-icon-precomposed" href="/oss/mobile/images/apple-touch-icon.png">
+<link rel="apple-touch-startup-image" type="image/x-icon" href="/resources/mobile/images/apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="/resources/mobile/images/apple-touch-icon.png">
 <link href="/resources/css/wap.css" rel="stylesheet" type="text/css"/>
 
-<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js" ></script>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" ></script>
 <script type="text/javascript" src="/resources/web/js/jquery.corner.js"></script>
 <script type="text/javascript" src="/resources/web/js/corner.js"></script>
 <script type="text/javascript" src="/resources/web/js/baseCookie.js"></script>
 <div id='wx_pic' style='margin:0 auto;display:none;'>
-    <img alt="logo" src="/oss/mobile/images/logo_300x300.jpg"/>
+    <img alt="logo" src="/resources/mobile/images/logo_300x300.jpg"/>
 </div>

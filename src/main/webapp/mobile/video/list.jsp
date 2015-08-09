@@ -56,5 +56,6 @@
 <!--页脚部分 -->
 <%@include file="/WEB-INF/jspf/mobile/footer.jspf" %>
 <!--页脚部分结束 -->
+<script>app.chatroom()</script>
 </body>
 </html>
