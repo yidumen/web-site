@@ -50,7 +50,7 @@ h5 {
     float: right;
     display: block;
     _margin-right: -40px;
-    background: url(/oss/web/images/yidumen.png) no-repeat;
+    background: url(/resources/web/images/yidumen.png) no-repeat;
 }
 
 #navigator {
@@ -158,7 +158,7 @@ h5 {
 }
 
 .nav_notice_inside .friend_login .button, .nav_notice_inside1 .friend_login .button {
-    background: url(/oss/web/images/yidumen.png) no-repeat -130px 0;
+    background: url(/resources/web/images/yidumen.png) no-repeat -130px 0;
     height: 24px;
     width: 50px;
     border: none;
@@ -168,7 +168,7 @@ h5 {
 }
 
 .nav_notice_inside .friend_login .error, .nav_notice_inside1 .friend_login .error {
-    background: url(/oss/web/images/exist.gif) no-repeat 1px 6px;
+    background: url(/resources/web/images/exist.gif) no-repeat 1px 6px;
     padding-left: 19px;
     line-height: 26px;
 }
@@ -264,7 +264,7 @@ h5 {
 }
 
 .chatroom_login_input div {
-    background: url(/oss/web/images/yidumen.png) 0 -445px no-repeat;
+    background: url(/resources/web/images/yidumen.png) 0 -445px no-repeat;
     line-height: 30px;
     height: 30px;
     margin-top: 10px;
@@ -281,7 +281,7 @@ h5 {
 }
 
 .chatroom_login_submit {
-    background: url(/oss/web/images/yidumen.png) no-repeat -120px -400px;
+    background: url(/resources/web/images/yidumen.png) no-repeat -120px -400px;
     height: 20px;
     width: 55px;
     border: none;
@@ -372,7 +372,7 @@ h5 {
     float: right;
     margin-top: 7px;
     display: block;
-    background: url(/oss/web/images/arrow.gif) no-repeat;
+    background: url(/resources/web/images/arrow.gif) no-repeat;
     width: 10px;
     height: 7px;
 }
@@ -577,7 +577,7 @@ h5 {
     height: 32px;
     width: 82px;
     border: none;
-    background: url(/oss/web/images/yidumen.png) -60px -240px;
+    background: url(/resources/web/images/yidumen.png) -60px -240px;
     vertical-align: middle;
     font-size: 14px;
     color: #666;
@@ -624,7 +624,7 @@ h5 {
     height: 20px;
     line-height: 20px;
     text-align: center;
-    background: url(/oss/web/images/yidumen.png) no-repeat;
+    background: url(/resources/web/images/yidumen.png) no-repeat;
     margin-right: 10px;
     float: left;
     margin-top: 5px;
@@ -692,7 +692,7 @@ h5 {
     width: 50px;
     height: 24px;
     line-height: 24px;
-    background: url(/oss/web/images/yidumen.png) no-repeat -130px 0;
+    background: url(/resources/web/images/yidumen.png) no-repeat -130px 0;
     border: none;
     color: #fff;
     margin-left: 5px;

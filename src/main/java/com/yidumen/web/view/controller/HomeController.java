@@ -2,7 +2,6 @@ package com.yidumen.web.view.controller;
 
 import com.yidumen.web.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.mobile.device.Device;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +27,6 @@ public final class HomeController {
         }
         if (device.isMobile()) {
             model.addAttribute("nav", 0);
-            model.addAttribute("videos", vs.getTopNewVideos(4));
             return "mobile/home";
         } else {
             return "home";

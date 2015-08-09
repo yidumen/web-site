@@ -1,12 +1,10 @@
 package com.yidumen.web.service.impl;
 
-import com.yidumen.dao.TagDAO;
-import com.yidumen.dao.VideoDAO;
-import com.yidumen.dao.constant.TagType;
-import com.yidumen.dao.constant.VideoStatus;
-import com.yidumen.dao.entity.Tag;
-import com.yidumen.dao.entity.Video;
-import com.yidumen.dao.model.VideoQueryModel;
+import com.yidumen.web.constant.TagType;
+import com.yidumen.web.entity.Tag;
+import com.yidumen.web.entity.Video;
+import com.yidumen.web.repository.TagRepository;
+import com.yidumen.web.repository.VideoRepository;
 import com.yidumen.web.service.VideoService;
 import com.yidumen.web.view.model.VideoGroup;
 import com.yidumen.web.view.model.VideoShootDate;
@@ -14,8 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -25,14 +23,13 @@ import java.util.*;
  * @author 刘超 蔡迪旻 <yidumen.com>
  */
 @Service
-@Transactional
 public class VideoServiceImpl implements VideoService {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
     @Autowired
-    private VideoDAO videoDao;
+    private VideoRepository videoDao;
     @Autowired
-    private TagDAO tagDao;
+    private TagRepository tagDao;
 
     private final String[] month_cn;
 
@@ -41,36 +38,13 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public List<Video> getTopNewVideos(final int limit) {
-        final VideoQueryModel model = new VideoQueryModel();
-
-        final List<VideoStatus> status = new ArrayList<>();
-        status.add(VideoStatus.PUBLISH);
-        model.setStatus2(status);
-        final Set<Tag> tags = new HashSet<>();
-        Tag tag = tagDao.find("聊天室");
-        tags.add(tag);
-        model.setTags(tags);
-        model.setOrderProperty("pubDate");
-        model.setDesc(true);
-        model.setLimit(limit);
-        return this.find(model);
+    public List<Video> findChatroomVideos(final int index, final int size) {
+        return videoDao.findChatroomVideos(index, size);
     }
 
     @Override
     public List<Video> getRecommend() {
-        final VideoQueryModel model = new VideoQueryModel();
-
-        final List<VideoStatus> status = new ArrayList<>();
-        status.add(VideoStatus.PUBLISH);
-        model.setStatus2(status);
-
-        model.setRecommendVideo(true);
-        model.setRecommend(1);
-        model.setRecommend2(Integer.MAX_VALUE);
-        model.setOrderProperty("recommend");
-        model.setDesc(true);
-        return this.find(model);
+        return videoDao.findRecommend();
     }
 
     @Override
@@ -193,28 +167,13 @@ public class VideoServiceImpl implements VideoService {
         return videoDao.find(file);
     }
 
-    @Override
-    public List<Video> find(final Video video) {
-        final VideoQueryModel model = new VideoQueryModel();
-        model.setShootTime(video.getShootTime());
-        model.setShootTime2(video.getShootTime());
-        model.setOrderProperty("sort");
-        model.setDesc(true);
-        final List<Video> result = videoDao.find(model);
-        result.remove(video);
-        return result;
-    }
-
     /**
      * 通过查询模型Bean来查询符合特定条件的视频。<br/>
      * model只需设置需要成为条件的属性即可，未设置的属性将被忽略掉。
-     *
-     * @param model
-     * @return
      */
     @Override
-    public List<Video> find(VideoQueryModel model) {
-        return videoDao.find(model);
+    public List<Video> find(Map<String, Object[]> condition) {
+        return videoDao.findBetween(condition);
     }
 
     @Override
@@ -223,27 +182,22 @@ public class VideoServiceImpl implements VideoService {
     }
 
     @Override
-    public Set<Video> findDiamond() {
-        Tag tag = new Tag();
-        tag.setTagname("金刚经");
-        tag.setType(TagType.COLUMN);
-        List<Tag> tags = tagDao.find(tag, false);
-        return tags.get(0).getVideos();
+    public List<Video> findDiamond() {
+        return videoDao.findByColumn("金刚经");
     }
 
     @Override
     public List<Video> getExtract() {
-        final VideoQueryModel model = new VideoQueryModel();
+        return videoDao.findByColumn("开示摘录");
+    }
 
-        final List<VideoStatus> status = new ArrayList<>();
-        status.add(VideoStatus.PUBLISH);
-        model.setStatus2(status);
-        final Set<Tag> tags = new HashSet<>();
-        Tag tag = tagDao.find("开示摘录");
-        tags.add(tag);
-        model.setTags(tags);
-        model.setOrderProperty("file");
-        model.setDesc(false);
-        return this.find(model);
+    @Override
+    public List<Video> findLotus() {
+        return videoDao.findByColumn("妙法莲华");
+    }
+
+    @Override
+    public List<Video> findWeibo() {
+        return videoDao.findByColumn("微博");
     }
 }

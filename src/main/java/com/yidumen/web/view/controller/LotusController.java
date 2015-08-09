@@ -1,6 +1,6 @@
 package com.yidumen.web.view.controller;
 
-import com.yidumen.dao.entity.Sutra;
+import com.yidumen.web.entity.Sutra;
 import com.yidumen.web.service.SutraService;
 import com.yidumen.web.view.model.SutraModel;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class LotusController {
     @Autowired
     private SutraService sutraService;
 
-    @RequestMapping("list")
+    @RequestMapping
     public String lotusList(final Model model,
                             final Device device,
                             @CookieValue(value = "videoformat", defaultValue = "360") final String videoFormat) {

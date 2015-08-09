@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<div id="header"> 
-    <div class="header"><a href="/"><img alt="logo" src="/resources/mobile/images/logo.png"/></a></div>
+<div id="header">
+    <div class="header"><a href="/"><img alt="logo" src="/oss/mobile/images/logo.png"/></a></div>
 </div>
 <div style="width:100%; background-color:#fdf2d9">  
   <div id="nav_bar">

@@ -1,6 +1,6 @@
 package com.yidumen.web.view.controller;
 
-import com.yidumen.dao.entity.Sutra;
+import com.yidumen.web.entity.Sutra;
 import com.yidumen.web.service.SutraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mobile.device.Device;

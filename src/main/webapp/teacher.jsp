@@ -65,36 +65,10 @@
 
 <!--web footer width:100% -->
 <%@include file="/WEB-INF/jspf/footer.jspf" %>
-<script src="/resources/js/yidumen_jquery.js"></script>
-<script src="/resources/web/js/jquery.corner.js"></script>
-<script src="/resources/web/js/corner.js"></script>
 <script src="/resources/video-js/video.js"></script>
 <script src="/resources/video-js/yidumen-player.js"></script>
+<script src="/resources/js/normal.js"></script>
 <!--/web footer -->
-<script>
-    videojs.options.flash.swf = "/resources/video-js/video-js.swf";
-    playlist = [
-        {file: "W0001", title: "微博集合（一）"},
-        {file: "W0002", title: "微博集合（二）"},
-        {file: "W0003", title: "微博集合（三）"},
-        {file: "W0004", title: "微博集合（四）"},
-        {file: "W0005", title: "微博集合（五）"},
-        {file: "W0006", title: "微博集合（六）"},
-        {file: "W0007", title: "微博集合（七）"},
-        {file: "W0008", title: "微博集合（八）"},
-        {file: "W0009", title: "微博集合（九）"},
-        {file: "W0010", title: "微博集合（十）"},
-        {file: "W0011", title: "微博集合（十一）"}
-    ];
-    var vjs = videojs("video-player", {
-        "controls": true,
-        "autoplay": true,
-        "width": "784",
-        "height": "100%",
-        plugins: {
-            ydmPlayer: playlist
-        }
-    });
-</script>
+<script>app.weiboList()</script>
 </body>
 </html>

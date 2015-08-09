@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>${title} - 易度门</title>
+        <title>星路 - 易度门</title>
         <meta name="keywords" content="星路" />
         <meta name="description" content="星路" />
         <%@include file="/WEB-INF/jspf/header.jspf" %>
@@ -20,7 +20,7 @@
                     <c:forEach var="buddhism" items="${buddhisms}">
                         <c:choose>
                             <c:when test="${buddhism.content != null}">
-                                <p><a href="/${path}/${buddhism.id}">${buddhism.partIdentifier} ${buddhism.title}</a></p>
+                                <p><a href="/novel/${path}/${buddhism.id}">${buddhism.partIdentifier} ${buddhism.title}</a></p>
                             </c:when>
                             <c:otherwise>
                                 <p>${buddhism.partIdentifier} ${buddhism.title}</p>
