@@ -8,8 +8,6 @@
 <link href="/resources/css/wap.css" rel="stylesheet" type="text/css"/>
 
 <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" ></script>
-<script type="text/javascript" src="/resources/web/js/jquery.corner.js"></script>
-<script type="text/javascript" src="/resources/web/js/corner.js"></script>
 <script type="text/javascript" src="/resources/web/js/baseCookie.js"></script>
 <div id='wx_pic' style='margin:0 auto;display:none;'>
     <img alt="logo" src="/resources/mobile/images/logo_300x300.jpg"/>

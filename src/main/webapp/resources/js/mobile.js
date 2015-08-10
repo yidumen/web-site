@@ -113,7 +113,7 @@ var app = {
         if (play) {
           $('#video-player').attr('src', 'http://v3.yidumen.com/video/360/' + data[0].file + '_360.mp4');
           $('#video-switcher').append('<li><a href="http://v3.yidumen.com/video/720/' + data[0].file + '_720.mp4">超清</a></li>')
-            .append('<li><a href="http://v3.yidumen.com/video/480/' + data[0].file + '_720.mp4">高清</a></li>')
+            .append('<li><a href="http://v3.yidumen.com/video/480/' + data[0].file + '_480.mp4">高清</a></li>')
             .append('<li id="active"><a href="http://v3.yidumen.com/video/360/' + data[0].file + '_360.mp4">标清</a></li>')
             .append('<li><a href="http://v3.yidumen.com/video/180/' + data[0].file + '_180.mp4">流畅</a></li>')
         }
@@ -143,6 +143,10 @@ var app = {
     };
     $(window).scroll(scrollListen);
     result.resolve(videos);
+    $('#video-switcher').on('click', 'li>a', function (event) {
+      $('#video-player').attr('src', $(this).attr('href'));
+      return false;
+    })
   },
   chatroom: function () {
     this.videoList(true);
@@ -153,19 +157,12 @@ var app = {
   },
   videoView: function () {
     $.getJSON('/ajax/video/' + this.pathValue()).done(function (data) {
-      var videos = [];
-      videos.push(data);
-      videojs("video-player", {
-        "controls": true,
-        "autoplay": true,
-        "width": "100%",
-        "height": "100%",
-        plugins: {
-          ydmPlayer: {
-            videos: videos
-          }
-        }
-      });
+      $('#video-player').attr('src', 'http://v3.yidumen.com/video/360/' + data.file + '_360.mp4');
+      $('#video-switcher').append('<li><a href="http://v3.yidumen.com/video/720/' + data.file + '_720.mp4">超清</a></li>')
+        .append('<li><a href="http://v3.yidumen.com/video/480/' + data.file + '_480.mp4">高清</a></li>')
+        .append('<li id="active"><a href="http://v3.yidumen.com/video/360/' + data.file + '_360.mp4">标清</a></li>')
+        .append('<li><a href="http://v3.yidumen.com/video/180/' + data.file + '_180.mp4">流畅</a></li>')
+
     });
     this.videoList(false);
   },
